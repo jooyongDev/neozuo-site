@@ -10,6 +10,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 60px; }
 body {
   margin: 0;
   font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
@@ -116,3 +117,25 @@ details p { color: var(--muted); margin: 12px 0 0; }
 .legal ul { padding-left: 20px; margin: 0 0 1em; color: var(--muted); }
 .legal p { color: var(--muted); }
 .nw { white-space: nowrap; }
+
+/* work / case studies */
+.work-card { display: block; text-decoration: none; color: var(--ink); transition: border-color .15s; }
+.work-card:hover { border-color: var(--brand); }
+.work-card h3 { font-size: 19px; }
+.work-card p { margin-bottom: 14px; }
+.more { color: var(--brand); font-weight: 600; font-size: 15px; }
+.case .eyebrow a { color: inherit; text-decoration: none; }
+.case-title { font-size: clamp(26px, 5.5vw, 38px); font-weight: 800; letter-spacing: -.02em; }
+.case h2 { font-size: 20px; margin-top: 36px; }
+.case p, .did li { color: var(--muted); }
+.facts { margin: 28px 0 0; border-top: 1px solid var(--line); }
+.facts div { display: grid; grid-template-columns: 5.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.facts dt { font-weight: 700; }
+.facts dd { margin: 0; color: var(--muted); }
+.did { padding-left: 20px; margin: 0; }
+.did li { margin-bottom: 12px; }
+.did strong { display: block; color: var(--ink); }
+.stack { font-weight: 600; }
+.case-cta { margin-top: 48px; padding: 28px 24px; border-radius: var(--radius); background: var(--bg-alt); }
+.case-cta h2 { margin-top: 0; }
+.case-cta .btn { margin: 6px 8px 0 0; }
