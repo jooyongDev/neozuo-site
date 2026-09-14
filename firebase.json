@@ -4,7 +4,7 @@
     "ignore": ["firebase.json", ".firebaserc", "README.md", "og-source.html", ".git", ".git/**", "**/.*", "**/.*/**", "**/node_modules/**"],
     "cleanUrls": false,
     "headers": [
-      { "source": "**/*.@(css|svg|png)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+      { "source": "**/*.@(css|svg|png|woff2)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
     ]
   }
 }
