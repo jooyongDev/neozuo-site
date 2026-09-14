@@ -91,6 +91,7 @@ details p { color: var(--muted); margin: 12px 0 0; }
 .form .consent { display: flex; gap: 8px; align-items: flex-start; font-weight: 400; font-size: 13px; color: var(--muted); }
 .form .consent input { margin-top: 4px; }
 .hp { display: none; }
+.form-error { color: #b91c1c; font-size: 14px; margin: 0; }
 .alt-contact { margin-top: 20px; color: var(--muted); }
 
 /* footer */

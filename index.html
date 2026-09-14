@@ -212,6 +212,7 @@
           </label>
           <label class="consent"><input type="checkbox" name="privacy_consent" value="동의" required> <span>상담을 위한 개인정보(성함, 이메일, 연락처) 수집·이용에 동의합니다. 상담 목적 외에는 사용하지 않으며, 상담 종료 후 1년 뒤 파기합니다. <a href="/privacy.html" target="_blank" rel="noopener">개인정보처리방침</a></span></label>
           <button class="btn" type="submit">상담 신청하기</button>
+          <p class="form-error" role="alert" hidden>전송에 실패했습니다. 잠시 후 다시 시도하시거나 <a href="mailto:dev@neozuo.com">dev@neozuo.com</a> 또는 카카오톡 채널로 문의해주세요.</p>
         </form>
         <p class="alt-contact">빠른 문의는 <a href="https://pf.kakao.com/_DmxirX" target="_blank" rel="noopener">카카오톡 채널</a>로 편하게 남겨주세요.</p>
       </div>
@@ -228,5 +229,21 @@
       <p class="copy">© 2026 NEOZUO. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+    // Web3Forms ignores the redirect field, so submit via fetch and send people to our own thanks page.
+    document.querySelector('.form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const form = e.target, btn = form.querySelector('button[type=submit]'), err = form.querySelector('.form-error');
+      btn.disabled = true; btn.textContent = '전송 중…'; err.hidden = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', headers: { Accept: 'application/json' }, body: new FormData(form) });
+        const data = await res.json();
+        if (!data.success) throw new Error(data.message);
+        location.href = '/thanks.html';
+      } catch {
+        err.hidden = false; btn.disabled = false; btn.textContent = '상담 신청하기';
+      }
+    });
+  </script>
 </body>
 </html>
