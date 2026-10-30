@@ -1,1 +1,7 @@
 .firebase/
+
+.impeccable-cache/
+.impeccable/questions/
+.impeccable/review/
+.taste-skill/
+node_modules/

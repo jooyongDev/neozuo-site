@@ -1,10 +1,37 @@
 {
   "hosting": {
     "public": ".",
-    "ignore": ["firebase.json", ".firebaserc", "README.md", "og-source.html", ".git", ".git/**", "**/.*", "**/.*/**", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "README.md",
+      "og-source.html",
+      ".git",
+      ".git/**",
+      "**/.*",
+      "**/.*/**",
+      "**/node_modules/**",
+      "PRODUCT.md",
+      "DESIGN.md",
+      "docs/**",
+      "tests/**",
+      "scripts/**",
+      "package.json",
+      "package-lock.json",
+      "*.zip",
+      "LICENSE*"
+    ],
     "cleanUrls": false,
     "headers": [
-      { "source": "**/*.@(css|svg|png|woff2)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+      {
+        "source": "**/*.@(css|svg|png|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400"
+          }
+        ]
+      }
     ]
   }
 }
