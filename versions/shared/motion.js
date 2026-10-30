@@ -30,7 +30,6 @@
   setMotion(stopped);
   // A finite, authored entrance. All content is visible before/without JavaScript.
   const hero = document.querySelector(".hero h1");
-  const object = document.querySelector(".n-mark");
   animate(
     hero,
     [
@@ -39,47 +38,28 @@
     ],
     { duration: 850 },
   );
-  if (document.body.classList.contains("theme-night")) {
-    animate(
-      object,
-      [
-        { transform: "rotateY(-38deg) rotateX(20deg) rotateZ(-14deg)" },
-        { transform: "rotateY(-24deg) rotateX(14deg) rotateZ(-9deg)" },
-      ],
-      { duration: 1400 },
-    );
-  } else if (object) {
-    animate(
-      object,
-      [
-        { transform: "translateX(45px) rotate(-2deg)" },
-        { transform: "translateX(0) rotate(-12deg)" },
-      ],
-      { duration: 1200 },
-    );
-  }
-  const cover = document.querySelector(".index-cover");
-  if (cover)
-    animate(
-      cover,
-      [{ clipPath: "inset(0 8% 0 0)" }, { clipPath: "inset(0 0% 0 0)" }],
-      { duration: 1100 },
-    );
+  const wordmark = document.querySelector(".hero-wordmark");
+  animate(
+    wordmark,
+    [
+      { transform: "translateY(30px)", clipPath: "inset(0 0 12% 0)" },
+      { transform: "translateY(0)", clipPath: "inset(0 0 0% 0)" },
+    ],
+    { duration: 1000 },
+  );
   const sculpture = document.querySelector(".brand-sculpture");
   if (sculpture)
     animate(
       sculpture,
       [
-        { transform: "scale(1.12) translateY(16px)", opacity: 0.6 },
-        { transform: "scale(1.04) translateY(0)", opacity: 1 },
+        { transform: "scale(1.06) translateY(12px)", opacity: 0.65 },
+        { transform: getComputedStyle(sculpture).transform, opacity: 1 },
       ],
       { duration: 1300 },
     );
   // Scroll only updates the signature brand composition, on demand and in view.
   // Native scrolling remains untouched; no continuous idle loop or scroll hijack.
-  const scene = document.querySelector(
-    ".brand-stage, .night-object, .index-cover",
-  );
+  const scene = document.querySelector(".brand-stage, .night-object");
   let scheduled = false;
   const updateScene = () => {
     scheduled = false;
