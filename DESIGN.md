@@ -264,3 +264,14 @@ Motion is limited to interaction feedback and smooth anchor scrolling. The reduc
 - Don't turn every heading into monumental display type.
 - Don't replace visible form labels or native controls with decorative approximations.
 - Don't use stock photography, fabricated screenshots, client logos, testimonials, or result metrics as proof without approved source material.
+
+
+## Korean copy conventions
+
+- Headings, navigation labels, and buttons have no terminal full stop. Questions keep a question mark; explanatory sentences use full stops.
+- Use familiar section labels: 개발 분야, 개발 사례, 진행 절차, 자주 묻는 질문, 프로젝트 문의.
+- Company explanations use 합니다체; questions and input guidance use polite conversational Korean.
+- Name concrete work and outcomes. Avoid vague metaphors such as “다음 단계를 만들다”, “일을 연결하다”, or “코드를 이어가다”.
+- Distinguish opening an inquiry from sending one: 프로젝트 문의하기 → 문의 내용 작성하기 → 문의 보내기.
+- Write natural Korean first, then adjust layout and line breaks. Do not omit grammar to fit a visual line.
+- Keep unconfirmed prices, report schedules, support periods, and SLAs out of public promises.

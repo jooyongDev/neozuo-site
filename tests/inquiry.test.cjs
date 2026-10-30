@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('site.js', 'utf8');
 function setup(fetchResult) {
-  const button = {disabled:false,innerHTML:'프로젝트 문의 보내기'};
+  const button = {disabled:false,innerHTML:'문의 보내기'};
   const error = {hidden:true};
   const progress = {hidden:true};
   const message = {value:''};
