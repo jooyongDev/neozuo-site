@@ -29,6 +29,7 @@ document.querySelector(".stage-choices")?.removeAttribute("disabled");
 const choices = document.querySelectorAll('input[name="stage"]');
 const message = document.querySelector("#contact-message");
 let selectedStage = "idea";
+let stageAnimation;
 choices.forEach((input) =>
   input.addEventListener("change", () => {
     if (!input.checked || !stageCopy[input.value]) return;
@@ -38,6 +39,22 @@ choices.forEach((input) =>
     document.querySelector("#stage-description").textContent = description;
     document.querySelector("#stage-preparation").textContent =
       `참고 자료: ${preparation}`;
+    // Keep arrow-key selection instant; pointer changes receive one short cue.
+    const answer = document.querySelector(".stage-answer");
+    stageAnimation?.cancel();
+    if (
+      answer?.animate &&
+      !input.matches(":focus-visible") &&
+      !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    ) {
+      stageAnimation = answer.animate(
+        [
+          { opacity: 0.65, transform: "translateY(4px)" },
+          { opacity: 1, transform: "translateY(0)" },
+        ],
+        { duration: 160, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
+      );
+    }
   }),
 );
 document.querySelector(".stage-continue")?.addEventListener("click", () => {
@@ -51,6 +68,7 @@ document.querySelector(".stage-continue")?.addEventListener("click", () => {
     status.textContent = "이미 작성한 문의 내용은 그대로 두었습니다.";
   }
   status.hidden = false;
+  message.focus({ preventScroll: true });
 });
 const form = document.querySelector(".form");
 form?.addEventListener("submit", async (event) => {

@@ -7,7 +7,7 @@ function setup(fetchResult) {
   const button = {disabled:false,innerHTML:'문의 보내기'};
   const error = {hidden:true};
   const progress = {hidden:true};
-  const message = {value:''};
+  const message = {value:'',focused:false,focus(){this.focused=true;}};
   const nodes = {'#contact-message':message,'#stage-status':{hidden:true},'#stage-title':{},'#stage-description':{},'#stage-preparation':{}};
   const choices = ['idea','build','existing','operate'].map(value=>({value,checked:false,addEventListener(t,fn){this.change=fn;}}));
   const continuation = {addEventListener(t,fn){this.click=fn;}};
@@ -35,5 +35,5 @@ test('duplicate submit while request is pending does not send twice',async()=>{
 test('invalid form never sends',async()=>{const s=setup(()=>{});s.invalidate();await s.submit();assert.equal(s.calls,0)});
 test('all project stages change guidance and prefill without overwriting a draft',()=>{
   const s=setup(()=>{});
-  for(const radio of s.choices){radio.checked=true;radio.change();assert.ok(s.nodes['#stage-title'].textContent);s.message.value='';s.continuation.click();assert.ok(s.message.value.length>10);s.message.value='나의 기존 문의';s.continuation.click();assert.equal(s.message.value,'나의 기존 문의');}
+  for(const radio of s.choices){radio.checked=true;radio.change();assert.ok(s.nodes['#stage-title'].textContent);s.message.value='';s.continuation.click();assert.ok(s.message.value.length>10);assert.equal(s.message.focused,true);s.message.value='나의 기존 문의';s.continuation.click();assert.equal(s.message.value,'나의 기존 문의');}
 });

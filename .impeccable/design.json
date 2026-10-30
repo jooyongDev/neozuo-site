@@ -268,8 +268,8 @@
       },
       {
         "name": "control-transition",
-        "value": "160ms ease-out",
-        "purpose": "Button color and press, and stage-choice color transitions."
+        "value": "160ms ease",
+        "purpose": "Control colour state and selection indication; keyboard transitions are immediate."
       },
       {
         "name": "link-arrow-transition",
@@ -280,6 +280,11 @@
         "name": "reduced-motion",
         "value": "prefers-reduced-motion: reduce",
         "purpose": "Disables animations/transitions and smooth scrolling; removes hover arrow translation."
+      },
+      {
+        "name": "button-press",
+        "value": "140ms var(--ease)",
+        "purpose": "Subtle pointer press; disabled and keyboard buttons do not scale."
       }
     ],
     "breakpoints": [
@@ -360,7 +365,7 @@
       "refersTo": "faq",
       "description": "Native disclosure with a tonal open state.",
       "html": "<details class=\"ds-faq\"><summary>기획서가 없어도 문의할 수 있나요?<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m6 9 6 6 6-6\"/></svg></summary><p>네. 아이디어와 해결하고 싶은 문제만 있어도 괜찮습니다.</p></details>",
-      "css": ".ds-faq{font-family:\"Pretendard Subset\", \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif;padding:20px 24px;background:var(--paper,#f7f8f7);color:var(--ink,#182126)}.ds-faq[open]{background:var(--surface,#e9eeed)}.ds-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:clamp(18px,1.5vw,22px);font-weight:550;line-height:1.5;cursor:pointer;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:focus-visible{outline:3px solid currentColor;outline-offset:6px;}.ds-faq svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}.ds-faq[open] svg{transform:rotate(180deg)}.ds-faq p{margin:0;padding-top:20px;font-size:18px;line-height:1.65;color:var(--muted,#4c575c);max-width:50ch}@media(max-width:700px){.ds-faq{padding:20px 12px}.ds-faq summary{font-size:18px;gap:12px}.ds-faq svg{width:20px;height:20px}}"
+      "css": ".ds-faq{font-family:\"Pretendard Subset\", \"Pretendard Variable\", Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif;padding:0;background:var(--paper,#f7f8f7);color:var(--ink,#182126)}.ds-faq[open]{background:var(--surface,#e9eeed)}.ds-faq summary{padding:20px 24px;min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px;font-size:clamp(18px,1.5vw,22px);font-weight:550;line-height:1.5;cursor:pointer;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:focus-visible{outline:3px solid currentColor;outline-offset:-3px;}.ds-faq svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;}.ds-faq[open] svg{transform:rotate(180deg)}.ds-faq p{margin:0;padding:0 24px 24px;font-size:18px;line-height:1.65;color:var(--muted,#4c575c);max-width:50ch}@media(max-width:700px){.ds-faq summary{padding:20px 12px}.ds-faq p{padding:0 12px 24px}.ds-faq summary{font-size:18px;gap:12px}.ds-faq svg{width:20px;height:20px}}"
     },
     {
       "name": "Monument wordmark",

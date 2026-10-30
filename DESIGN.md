@@ -39,9 +39,9 @@ typography:
     letterSpacing: "-0.035em"
   introduction:
     fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(24px, 2.55vw, 36px)"
+    fontSize: "clamp(26px, 2.8vw, 42px)"
     fontWeight: 550
-    lineHeight: 1.4
+    lineHeight: 1.32
     letterSpacing: "-0.03em"
   body:
     fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
@@ -216,11 +216,11 @@ Primary buttons are firm, compact rectangles: cobalt with white text, weight 600
 
 Ghost buttons use the cool surface with ink text at rest and pale mint with ink text on fine-pointer hover.
 
-Buttons transition color and transform over 160ms with ease-out. Keyboard focus on buttons, links, and summaries uses a 3px current-color outline offset by 6px. Text links provide a 44px minimum target, underline on hover, and move an accompanying SVG by 4px over 180ms using the source ease curve.
+Buttons transition color over 160ms with ease and press transforms over 140ms with the shared custom ease-out curve. Keyboard presses do not scale. Disabled buttons do not respond to press transforms. Keyboard focus uses a 3px outline. Primary buttons use cobalt on light surfaces and white on the dark inquiry surface, rather than inheriting white text on a white background. FAQ focus is inset into its whole-row target. Text links provide a 44px minimum target, underline on hover, and move an accompanying SVG by 4px over 180ms using the source ease curve.
 
 ### Stage Choices
 
-Native radio inputs are visually hidden inside large clickable rectangular labels. Selection switches from a cool neutral fill to cobalt/white and reveals an SVG check. The focus ring surrounds the whole label. An adjacent polite live region updates the matching next step. The continue action seeds an empty inquiry message and preserves existing user text. Without JavaScript, the fieldset remains disabled and fallback explanatory text remains available.
+Native radio inputs are visually hidden inside large clickable rectangular labels. Selection switches from a cool neutral fill to cobalt/white and reveals an SVG check. The focus ring surrounds the whole label. An adjacent polite live region updates the matching next step. The continue action is a pale-cobalt button-like link aligned with its helper text. It seeds an empty inquiry message, preserves existing user text, and focuses and navigates to the message field. Pointer selection receives a 160ms answer transition; keyboard selection is immediate, and reduced motion disables the transition. The desktop answer block reserves 205px; intermediate and mobile reservations remain 275px and 240px. Without JavaScript, the fieldset remains disabled and fallback explanatory text remains available.
 
 ### Cards / Containers
 
@@ -238,7 +238,7 @@ An ordinary light header pairs a lowercase heavy wordmark with three text destin
 
 ### FAQ
 
-Native details/summary elements form generously padded rows. An opened disclosure gains the cool surface fill and rotates its SVG chevron by 180 degrees. The answer uses muted text and a readable maximum line length. Focus styling and keyboard interaction follow the native summary element.
+Native details/summary elements form generously padded rows. An opened disclosure gains the cool surface fill and rotates its SVG chevron by 180 degrees. The entire padded question row is the native summary target. Answers have separate side and bottom insets, muted text and a readable maximum line length. The chevron uses a 160ms transition; keyboard and reduced-motion interaction are immediate. Focus styling and keyboard interaction follow the native summary element.
 
 ### Monument Wordmark
 
@@ -246,7 +246,7 @@ The NEOZUO name appears as large, unbroken type on cobalt and again as a top-of-
 
 ### Motion and Accessibility
 
-Motion is limited to interaction feedback and smooth anchor scrolling. The reduced-motion query disables transitions and animations, changes anchor scrolling to auto, and removes hover arrow translation. The page provides a focusable skip link, semantic landmarks, headings, native form labels, and state announcements. Preserve these behaviors when extending the visual patterns.
+Motion is limited to interaction feedback, one short pointer-triggered stage-answer transition, and smooth anchor scrolling. Keyboard anchor navigation is immediate. Navigation links have a minimum 44px target height. The dark form declares its native color scheme, and consent has an explicit visible focus ring. The reduced-motion query disables transitions and animations, changes anchor scrolling to auto, and removes hover arrow translation. The page provides a focusable skip link, semantic landmarks, headings, native form labels, and state announcements. Preserve these behaviors when extending the visual patterns.
 
 ## Do's and Don'ts
 
