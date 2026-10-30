@@ -2,70 +2,72 @@
 <html lang="ko">
   <head>
     <meta charset="utf-8" />
-    <title>NEOZUO — 공유 이미지</title>
+    <title>NEOZUO 공유 이미지</title>
     <style>
       @font-face {
         font-family: Pretendard;
-        src: url("/fonts/pretendard-subset.woff2") format("woff2");
+        src: url("/fonts/pretendard-subset.woff2");
         font-weight: 100 900;
-        font-display: swap;
       }
       * {
         box-sizing: border-box;
       }
       html,
       body {
-        margin: 0;
         width: 1200px;
         height: 630px;
+        margin: 0;
         overflow: hidden;
       }
       body {
+        background: #ff8126;
+        color: #111;
         font-family: Pretendard, sans-serif;
-        background: #254bdf;
-        color: #fff;
-        padding: 52px;
+        padding: 36px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        align-items: center;
+      }
+      .copy {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 100%;
       }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: start;
+      .brand {
+        font-size: 36px;
+        font-weight: 800;
       }
       h1 {
-        font-size: 38px;
-        line-height: 1.45;
-        letter-spacing: -0.045em;
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -0.055em;
         margin: 0;
-        font-weight: 600;
+        font-weight: 650;
       }
       p {
-        font-size: 21px;
-        line-height: 1.6;
+        font-size: 24px;
         margin: 0;
-        color: #dfe6ff;
       }
-      .wordmark {
-        font-size: 278px;
-        line-height: 0.85;
-        font-weight: 800;
-        letter-spacing: -0.065em;
-        margin-left: -8px;
+      img {
+        width: 100%;
+        height: auto;
       }
       footer {
-        font-size: 19px;
-        color: #dfe6ff;
+        font-size: 22px;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>웹·앱 개발,<br />기획부터 도와드립니다</h1>
-      <p>기획부터 개발, 운영까지<br />웹·앱 개발팀</p>
-    </header>
-    <div class="wordmark">NEOZUO</div>
-    <footer>neozuo.com</footer>
+    <div class="copy">
+      <div class="brand">neozuo</div>
+      <div>
+        <h1>웹·앱 개발,<br />기획부터 도와드립니다</h1>
+        <p style="margin-top: 28px">기획부터 개발, 운영까지</p>
+      </div>
+      <footer>neozuo.com</footer>
+    </div>
+    <img src="/assets/hero-art.jpg" alt="NEOZUO 입체 타이포그래피" />
   </body>
 </html>

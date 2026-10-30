@@ -24,7 +24,7 @@
     "cleanUrls": false,
     "headers": [
       {
-        "source": "**/*.@(css|svg|png|woff2)",
+        "source": "**/*.@(css|svg|png|jpg|woff2)",
         "headers": [
           {
             "key": "Cache-Control",
