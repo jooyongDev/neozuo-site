@@ -1,7 +1,7 @@
 ---
 name: NEOZUO
-version: 2
-description: Colour chapters, original paper-object art, and large Korean typography
+version: 3
+description: Editorial monochrome, original paper-object art, and large Korean typography
 ---
 
 # NEOZUO design system
@@ -10,7 +10,7 @@ The live source of truth is `chapters.css`, loaded after the shared `styles.css`
 
 ## Direction
 
-Taste: **Colour chapters**, seed **785908472**. NEOZUO's six-letter name becomes a tangible two-storey construction. Its three educational service workflows become a coherent family of paper-object illustrations.
+Taste supplied the composition (seed **785908472**). The current palette is **editorial monochrome**, following the user’s preference for fewer colours. NEOZUO's six-letter name becomes a tangible two-storey construction. Its three educational service workflows become a coherent family of paper-object illustrations.
 
 The home page follows: offer → development cases → work selector → development fields → process → FAQ → inquiry. Original Korean descriptions, project facts, legal consent, form endpoint, and stage-selection behaviour remain intact. Titles, buttons, and navigation have no terminal periods.
 
@@ -20,14 +20,13 @@ The home page follows: offer → development cases → work selector → develop
 | --- | --- |
 | Primary text | `#111111` |
 | Secondary text | `#3a3a36` |
-| Paper | `#f2f2ed` |
-| Tonal surface | `#e4e4dd` |
-| Introduction / process | `#ff8126` |
-| Development cases | `#4db3ff` |
-| Work selector / inquiry | `#c5f53d` |
+| Paper | `#f5f5f2` |
+| Tonal surface | `#e9e9e5` |
+| Introduction / process / cases | `#ffffff` |
+| Work selector / inquiry | `#f5f5f2` |
 | Development fields / footer | `#161615` |
-| Primary action | `#bc123b` with white text |
-| Action hover | `#94102f` |
+| Primary action | `#2948c7` with white text |
+| Action hover | `#203aa3` |
 | Corners | Square |
 | Outer gutter | `clamp(20px, 2.8vw, 48px)` |
 
@@ -35,14 +34,14 @@ Pretendard is the only family. Use 400 for text and 650 for headings, with the e
 
 ## Components and layouts
 
-- Hero: large Korean headline, NEOZUO artwork, offer description and primary inquiry button. Five coloured navigation blocks match their destination chapters. On mobile, supporting text and CTA come before the image, followed by full-width navigation rows.
+- Hero: large Korean headline, NEOZUO artwork, offer description and primary inquiry button. Five navigation blocks share one quiet paper surface. On mobile, supporting text and CTA come before the image, followed by full-width navigation rows.
 - Cases: one large split feature and two unequal, staggered art plates. Images are conceptual illustrations, not actual client screenshots or product photographs. Existing text and case links provide the factual evidence.
 - Work selector: native radio rows and a live answer. The selected workflow supplies a writing prompt to the real inquiry form; existing text is never overwritten.
 - Capabilities: large fixed-position heading while four complete text rows pass alongside it; normal flow on mobile.
 - Process: four tiles rising in height across the desktop. Two columns on tablet, readable vertical sequence on mobile.
 - FAQ: native details/summary on alternating broad bands. Keyboard operation is retained.
-- Inquiry: paper form on lime ground, square fields, crimson submit action, existing consent and error states.
-- Footer: full-width lime wordmark on near-black and verified business information.
+- Inquiry: white form on a neutral paper ground, square fields, blue submit action, existing consent and error states.
+- Footer: full-width offwhite wordmark on near-black and verified business information.
 
 ## Motion and access
 
@@ -57,7 +56,7 @@ Elements remain visible by default. IntersectionObserver animates headings, imag
 1. Contact changed from address rows to the coupon form: a physical address treatment cannot hold the required inquiry form.
 2. Features changed from overlapping cards to pinned heading and complete rows: the original fan would obscure the long Korean descriptions.
 3. Hero preserves the swatch column but separates text and art because the typographic artwork has no quiet area for readable overlaid copy.
-4. Original crimson was darkened for white button-text contrast.
+4. Strong chapter colours have been removed. The palette uses white, paper and charcoal, with blue limited to primary actions. Images use CSS grayscale(1), including the sharing-image composition; original image files remain intact.
 
 ## Verification
 

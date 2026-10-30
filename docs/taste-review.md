@@ -1,3 +1,9 @@
+# Current revision: editorial monochrome
+
+The coloured-field version below is historical and was superseded after user review. The current design uses white, paper and charcoal with one blue action colour. Images are displayed in grayscale via CSS; no original assets were destructively edited. See DESIGN.md for current tokens.
+
+---
+
 # NEOZUO 디자인 변경 검토
 
 2026-10-30 · Taste `Colour chapters` · seed `785908472`

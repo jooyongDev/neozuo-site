@@ -1,18 +1,15 @@
-/* Colour chapters: original editorial art, one face, full-colour fields. */
+/* Editorial monochrome: neutral fields and one action colour. */
 :root {
   --ink: #111111;
   --muted: #3a3a36;
-  --paper: #f2f2ed;
-  --surface: #e4e4dd;
-  --orange: #ff8126;
-  --sky: #4db3ff;
-  --lime: #c5f53d;
+  --paper: #f5f5f2;
+  --surface: #e9e9e5;
   --dark: #161615;
-  --accent: #bc123b;
+  --accent: #2948c7;
   --blue: var(--accent);
-  --blue-dark: #94102f;
-  --mint: var(--lime);
-  --light-blue: var(--sky);
+  --blue-dark: #203aa3;
+  --mint: var(--surface);
+  --light-blue: var(--surface);
   --gutter: clamp(20px, 2.8vw, 48px);
   --radius: 0;
   --body: clamp(16px, 1.3vw, 19px);
@@ -22,7 +19,7 @@ body {
   line-height: 1.6;
 }
 .home {
-  background: var(--orange);
+  background: var(--white);
 }
 .home .wrap {
   max-width: 1760px;
@@ -47,7 +44,7 @@ body {
   color: var(--ink);
 }
 .hero-main {
-  background: var(--orange);
+  background: var(--white);
   padding: 28px 32px 32px;
   min-width: 0;
 }
@@ -77,6 +74,7 @@ body {
   height: auto;
   aspect-ratio: 3/2;
   object-fit: cover;
+  filter: grayscale(1);
 }
 .home .hero-description {
   max-width: none;
@@ -120,23 +118,23 @@ body {
   outline-offset: -7px;
 }
 .swatch-work {
-  background: var(--sky);
+  background: var(--paper);
 }
 .swatch-start {
-  background: var(--lime);
+  background: var(--paper);
 }
 .swatch-services {
-  background: var(--dark);
-  color: var(--paper);
+  background: var(--paper);
+  color: var(--ink);
 }
 .swatch-process {
-  background: var(--orange);
+  background: var(--paper);
 }
 .swatch-faq {
   background: var(--paper);
 }
 .home .work {
-  background: var(--sky);
+  background: var(--white);
 }
 .home .section-heading {
   align-items: end;
@@ -168,6 +166,7 @@ body {
   height: auto;
   aspect-ratio: 3/2;
   object-fit: cover;
+  filter: grayscale(1);
   transition: transform 0.6s var(--ease);
 }
 .home .project h3 {
@@ -200,7 +199,7 @@ body {
   font-size: clamp(26px, 2.8vw, 42px);
 }
 .home .start {
-  background: var(--lime);
+  background: var(--paper);
 }
 .home .start-layout {
   display: block;
@@ -231,7 +230,7 @@ body {
   gap: 8px;
 }
 .home .stage-choices label {
-  background: var(--paper);
+  background: var(--white);
   color: var(--ink);
   min-height: 82px;
   padding: 24px;
@@ -311,12 +310,12 @@ body {
 }
 .home .service-list .service-examples {
   text-align: left;
-  color: var(--lime);
+  color: var(--paper);
   font-size: 16px;
   margin-top: 16px;
 }
 .home .process {
-  background: var(--orange);
+  background: var(--white);
 }
 .home .process-layout {
   display: block;
@@ -348,11 +347,11 @@ body {
 }
 .home .process-list li:nth-child(2) {
   min-height: 390px;
-  background: var(--sky);
+  background: var(--paper);
 }
 .home .process-list li:nth-child(3) {
   min-height: 450px;
-  background: var(--lime);
+  background: var(--paper);
 }
 .home .process-list li:nth-child(4) {
   min-height: 510px;
@@ -393,7 +392,7 @@ body {
   color: inherit;
 }
 .home .contact {
-  background: var(--lime);
+  background: var(--paper);
   color: var(--ink);
 }
 .home .contact-layout {
@@ -408,7 +407,7 @@ body {
 }
 .home .form {
   padding: 40px;
-  background: var(--paper);
+  background: var(--white);
 }
 .home .form input:not([type="checkbox"]),
 .home .form textarea {
@@ -439,7 +438,7 @@ body {
 }
 .home .footer {
   background: var(--dark);
-  color: var(--lime);
+  color: var(--paper);
   padding: 72px 0 32px;
 }
 .home .footer-wordmark {
@@ -492,7 +491,7 @@ body {
     transform: translateX(4px);
   }
   .home .stage-choices label:hover {
-    background: var(--sky);
+    background: var(--surface);
     color: var(--ink);
   }
   .home .stage-choices label:has(:checked):hover {
