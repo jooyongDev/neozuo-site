@@ -1,10 +1,60 @@
 {
   "hosting": {
     "public": ".",
-    "ignore": ["firebase.json", ".firebaserc", "README.md", "og-source.html", ".git", ".git/**", "**/.*", "**/.*/**", "**/node_modules/**"],
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "README.md",
+      "og-source.html",
+      ".git",
+      ".git/**",
+      "**/.*",
+      "**/.*/**",
+      "**/node_modules/**",
+      "**/*.log",
+      "firepit-log.txt",
+      "PRODUCT.md",
+      "DESIGN.md",
+      "docs/**",
+      "tests/**",
+      "scripts/**",
+      "package.json",
+      "package-lock.json",
+      "*.zip",
+      "LICENSE*",
+      "versions/**",
+      "archive/**",
+      "**/*.md"
+    ],
     "cleanUrls": false,
     "headers": [
-      { "source": "**/*.@(css|svg|png|woff2)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+      {
+        "source": "**/*.@(css|js|svg|png|jpg|jpeg|webp|woff2)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      }
     ]
   }
 }

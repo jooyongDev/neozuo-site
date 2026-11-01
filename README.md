@@ -1,8 +1,57 @@
 # neozuo.com
 
-NEOZUO 홈페이지. Static HTML/CSS, Firebase Hosting.
+NEOZUO의 웹·앱 개발 문의 사이트. 확정한 B / Night 디자인을 기본 홈페이지와 사례 상세에 적용했습니다. Static HTML/CSS/JavaScript와 Firebase Hosting을 사용합니다.
 
-- Deploy: `firebase deploy --only hosting --project <project-id>`
-- Copy source of truth: Paperclip NEO-3 `positioning` document.
-- Case studies (`/work/`): only copy cleared by the Delivery Lead final fact-check (NEO-7) goes here. PMP and allclass are live; viliv waits for founder attribution.
-- Font: `fonts/pretendard-subset.woff2` holds only the glyphs used on the site (fast mobile first paint). Pages still load CDN Pretendard as a fallback for any new characters. After big copy changes, regenerate it: collect every character from the HTML pages into `chars.txt`, then run `pip install fonttools brotli` and `python -m fontTools.subset PretendardVariable.woff2 --text-file=chars.txt --flavor=woff2 --layout-features='*' --output-file=fonts/pretendard-subset.woff2`. Get `PretendardVariable.woff2` from pretendard v1.3.9.
+## 로컬 실행
+
+저장소 루트에서 `python3 -m http.server 4173 --bind 127.0.0.1`을 실행하고 http://127.0.0.1:4173 에 접속합니다. 빌드 과정이나 npm 설치는 필요하지 않습니다.
+
+- `index.html`: 기본 홈페이지
+- `work/`: PMP, viliv, allclass 사례 상세
+- `styles.css`, `assets/`: 공통 스타일, 인터랙션, 브랜드 이미지
+- `site.js`: 문의 초안과 전송 상태 처리
+- `privacy.html`, `thanks.html`, `404.html`: 개인정보처리방침, 접수 완료, 없는 페이지
+- `PRODUCT.md`, `DESIGN.md`, `.impeccable/design.json`: 현재 제품·디자인 기준
+- `versions/`, `archive/pre-night/`: 이전 시안과 원본 기록. Firebase 배포에서 제외됩니다.
+
+## 검증
+
+`node --test tests/*.test.cjs`로 문의 상태와 배포 파일·경로를 검증합니다. 가짜 DOM과 응답을 사용하며 실제 고객 문의는 보내지 않습니다. 브라우저에서는 모바일/태블릿/데스크톱, 사례 이동, FAQ, 키보드, 모션 끄기, 문의 초안 보존을 확인합니다.
+
+## 배포
+
+2026-10-31부터 사용자의 요청에 따라 홈페이지 변경을 검증한 뒤 기존 Firebase Hosting에 배포합니다. 이 범위의 배포 승인을 매번 다시 요청하지 않습니다. `firebase.json`은 시안·아카이브·내부 문서·CLI 로그를 배포에서 제외하며, canonical 및 sitemap은 neozuo.com의 기본 경로를 사용합니다.
+
+Firebase 대상은 `.firebaserc`의 `neozuo-homepage`, 사용자가 지정한 관리 계정은 `dev@neozuo.com`입니다. 다른 프로젝트의 기본 로그인은 바꾸지 않고 명령마다 계정을 명시합니다.
+
+1. `node --test tests/*.test.cjs`와 변경 범위에 맞는 브라우저 검증을 실행합니다.
+2. `firebase deploy --only hosting --project neozuo-homepage --account dev@neozuo.com`으로 배포합니다.
+3. https://neozuo.com 에서 변경한 페이지, 관련 링크·리소스, 모바일 화면을 확인하고 배포 결과를 기록합니다.
+
+Web3Forms 실제 수신은 자동 테스트와 별개입니다. 테스트를 이유로 문의를 임의 전송하지 않습니다. 기존 공개 사례와 법적 내용을 유지하고, 새 고객 자료나 주장을 추가할 때 출처와 공개 범위를 확인합니다.
+
+## 최근 운영 배포
+
+2026-11-01 03:59 KST에 PMP 화면 8장을 3배 해상도로 재촬영해 배포했습니다. 학생 화면은 1170×2532, 대시보드·제출 현황은 5130×2955, 전체 성적표는 5130×4521 픽셀입니다. PNG 원본과 픽셀이 동일한 무손실 WebP를 사용하며 8장 합계는 659,874바이트입니다. 뷰어는 이미지 픽셀 밀도를 반영해 기존 표시 크기와 성적표 크롭을 유지합니다. 자동 테스트 18개, 320/390/768/1710px 브라우저 검사, 공개 파일 33개 비교와 내부 경로 9개 제외 검증을 통과했습니다. 운영 사이트의 데스크톱·모바일 확대도 확인했습니다. 버전 `36d9451d3407d407`, 릴리스 `1793473185233000`입니다. 촬영용 복제본·캐시·가상환경·서버와 전용 Docker 컨테이너 2개를 정리했으며 기존 개발 환경은 유지했습니다.
+
+2026-11-01 02:21 KST에 PMP 상세 critique의 세 개선사항을 모두 배포했습니다. 이미지 확대·축소·화면 맞춤·실패 후 재시도, 모바일 학생 화면 크기, 개발 과정을 설명하는 본문, 현재 구간을 표시하는 목차와 중간 문의 링크를 보완했습니다. Chrome 320/360/390/768/1710px에서 변경 범위를 검증했고 자동 테스트 18개, 공개 파일 33개 비교 및 내부 경로 9개의 배포 제외 검증을 통과했습니다. 실제 iOS/Android 터치는 별도 검증하지 않았습니다. 버전 `fcf794e1a606a22c`, 릴리스 `1793467282655000`입니다.
+
+2026-11-01 00:47 KST에 PMP 실제 제품 화면 8장을 홈페이지와 사례 상세에 반영했습니다. 대시보드·복합 문제 풀이·OMR 제출 및 채점 관리·OMR 성적표를 선별했고, 예시 데이터와 Flutter 웹 실행 화면임을 표시했습니다. 이미지 확대 보기, 키보드·모션 제어, 360/390/768/1710px 화면을 확인했습니다. 독립 검토의 두 수정 사항이 해결되어 `ship` 판정을 받았으며, 자동 테스트 18개와 배포 후 공개 파일 32개 비교를 통과했습니다. 버전 `be935c34e5bdb489`, 릴리스 `1793461640305000`입니다. 화면 출처는 `docs/pmp-screenshot-provenance.json`, 구성 원칙은 `work/DESIGN.md`에 기록했습니다.
+
+2026-10-31 22:37 KST에 Emil 디자인 원칙에 따른 미세 모션을 배포했습니다. 첫 화면의 등장 순서, 최대 7px의 N 커서 반응, 사례 도식의 한 번만 재생되는 흐름, 메뉴·버튼 피드백을 적용했습니다. 키보드·모션 끄기·OS 동작 줄이기·탭 비활성화 처리를 검증했고, 18개 테스트 및 22개 공개 파일 비교를 통과했습니다. 버전 `126bb083b8b1a7c9`, 릴리스 `1793453848533000`입니다.
+
+2026-10-31 22:19 KST에 데스크톱 hero 이미지의 상단 잘림을 해결하고, 상단 투명·스크롤 후 반투명 내비게이션을 배포했습니다. 버전 `bbde08043b37f3af`, 릴리스 `1793452763974000`입니다. 데스크톱·태블릿·모바일, 앵커 이동과 모션 끄기를 확인했으며 14개 테스트 및 22개 공개 파일 비교를 통과했습니다.
+
+2026-10-31 22:08 KST에 B / Night 단독 사이트를 https://neozuo.com 에 배포했습니다. 프로젝트 `neozuo-homepage`, 계정 `dev@neozuo.com`, 버전 `c8702e2be2cacf32`, 릴리스 `1793452114924000`입니다. 14개 자동 테스트를 통과했고, 배포 후 22개 공개 파일이 소스와 일치하는지 확인했습니다. 시안·아카이브·내부 문서·CLI 로그 제외, 데스크톱·모바일 화면, 사례 이동과 모션 제어도 확인했습니다. 실제 문의를 전송하지는 않았습니다.
+
+## 글꼴과 공유 이미지
+
+Pretendard v1.3.9를 자체 호스팅합니다. `fonts/pretendard-subset.woff2`에 현재 공개 페이지와 동적 문구의 글자를 포함했습니다. 카피를 바꿀 때 부분 글꼴도 갱신합니다. 공개 CSS·JS·이미지·글꼴은 재검증 캐시를 사용하며, 이번 리뉴얼에서 기존 폰트·아이콘·공유 이미지의 주소에 버전을 붙여 이전 캐시를 피합니다. 라이선스는 `fonts/LICENSE.txt`입니다.
+
+`og-source.html`을 1200×630으로 캡처한 `og.png`를 공유 이미지로 사용합니다. 기존 투명 N 이미지의 출처를 유지하며 추가 고객 이미지를 만들지 않았습니다.
+
+## 2026-11-02 확정 A 사례 구성
+
+홈페이지의 개발 사례를 프로젝트 이름·개발 범위 중심으로 정리했습니다. PMP는 왼쪽 위 제목, 왼쪽 아래 설명·링크, 오른쪽 노트북과 단순 모바일 목업으로 구성합니다. 기기는 고정하고 화면만 HWPX 등록 → 문항 확인·학생 응시 → 결과 → 오답 복습 순서로 반복합니다. 화면 전환은 hover/focus, 화면 밖, 비활성 탭, 이미지 뷰어, 동작 줄이기 설정에서 멈춥니다. 별도 확대 안내·일시정지 버튼·시안 선택기는 없습니다.
+
+관련 파일은 `assets/project-devices.css`, `assets/project-devices.js`, `assets/projects.css`입니다. 실험 경로에 의존하지 않으며 기존 문의 전송과 사례 상세페이지를 유지합니다.

@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T12:52:08.218510+00:00",
+  "title": "Design System: NEOZUO",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#111317",
+        "tonalRamp": [
+          "oklch(15% 0.0031 264.34)",
+          "oklch(26% 0.0053 264.34)",
+          "oklch(38% 0.0070 264.34)",
+          "oklch(49% 0.0088 264.34)",
+          "oklch(61% 0.0088 264.34)",
+          "oklch(72% 0.0070 264.34)",
+          "oklch(84% 0.0044 264.34)",
+          "oklch(95% 0.0016 264.34)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#f2f4ef",
+        "tonalRamp": [
+          "oklch(15% 0.0024 124.45)",
+          "oklch(26% 0.0042 124.45)",
+          "oklch(38% 0.0055 124.45)",
+          "oklch(49% 0.0069 124.45)",
+          "oklch(61% 0.0069 124.45)",
+          "oklch(72% 0.0055 124.45)",
+          "oklch(84% 0.0035 124.45)",
+          "oklch(95% 0.0012 124.45)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "#adb4bb",
+        "tonalRamp": [
+          "oklch(15% 0.0045 247.99)",
+          "oklch(26% 0.0076 247.99)",
+          "oklch(38% 0.0102 247.99)",
+          "oklch(49% 0.0127 247.99)",
+          "oklch(61% 0.0127 247.99)",
+          "oklch(72% 0.0102 247.99)",
+          "oklch(84% 0.0064 247.99)",
+          "oklch(95% 0.0023 247.99)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface",
+        "canonical": "#22262e",
+        "tonalRamp": [
+          "oklch(15% 0.0056 264.26)",
+          "oklch(26% 0.0096 264.26)",
+          "oklch(38% 0.0128 264.26)",
+          "oklch(49% 0.0160 264.26)",
+          "oklch(61% 0.0160 264.26)",
+          "oklch(72% 0.0128 264.26)",
+          "oklch(84% 0.0080 264.26)",
+          "oklch(95% 0.0029 264.26)"
+        ]
+      },
+      "accent": {
+        "role": "primary",
+        "displayName": "Accent",
+        "canonical": "#aabaff",
+        "tonalRamp": [
+          "oklch(15% 0.0349 273.90)",
+          "oklch(26% 0.0598 273.90)",
+          "oklch(38% 0.0797 273.90)",
+          "oklch(49% 0.0996 273.90)",
+          "oklch(61% 0.0996 273.90)",
+          "oklch(72% 0.0797 273.90)",
+          "oklch(84% 0.0498 273.90)",
+          "oklch(95% 0.0179 273.90)"
+        ]
+      },
+      "on-accent": {
+        "role": "neutral",
+        "displayName": "On Accent",
+        "canonical": "#111832",
+        "tonalRamp": [
+          "oklch(15% 0.0182 270.29)",
+          "oklch(26% 0.0312 270.29)",
+          "oklch(38% 0.0416 270.29)",
+          "oklch(49% 0.0520 270.29)",
+          "oklch(61% 0.0520 270.29)",
+          "oklch(72% 0.0416 270.29)",
+          "oklch(84% 0.0260 270.29)",
+          "oklch(95% 0.0094 270.29)"
+        ]
+      },
+      "field": {
+        "role": "neutral",
+        "displayName": "Field",
+        "canonical": "#191d24",
+        "tonalRamp": [
+          "oklch(15% 0.0052 261.64)",
+          "oklch(26% 0.0089 261.64)",
+          "oklch(38% 0.0119 261.64)",
+          "oklch(49% 0.0149 261.64)",
+          "oklch(61% 0.0149 261.64)",
+          "oklch(72% 0.0119 261.64)",
+          "oklch(84% 0.0074 261.64)",
+          "oklch(95% 0.0027 261.64)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#616976",
+        "tonalRamp": [
+          "oklch(15% 0.0080 260.15)",
+          "oklch(26% 0.0137 260.15)",
+          "oklch(38% 0.0182 260.15)",
+          "oklch(49% 0.0228 260.15)",
+          "oklch(61% 0.0228 260.15)",
+          "oklch(72% 0.0182 260.15)",
+          "oklch(84% 0.0114 260.15)",
+          "oklch(95% 0.0041 260.15)"
+        ]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "Rule",
+        "canonical": "#3e4652",
+        "tonalRamp": [
+          "oklch(15% 0.0080 258.37)",
+          "oklch(26% 0.0138 258.37)",
+          "oklch(38% 0.0184 258.37)",
+          "oklch(49% 0.0229 258.37)",
+          "oklch(61% 0.0229 258.37)",
+          "oklch(72% 0.0184 258.37)",
+          "oklch(84% 0.0115 258.37)",
+          "oklch(95% 0.0041 258.37)"
+        ]
+      },
+      "action": {
+        "role": "primary",
+        "displayName": "Action",
+        "canonical": "#e0e6fa",
+        "tonalRamp": [
+          "oklch(15% 0.0098 272.51)",
+          "oklch(26% 0.0167 272.51)",
+          "oklch(38% 0.0223 272.51)",
+          "oklch(49% 0.0279 272.51)",
+          "oklch(61% 0.0279 272.51)",
+          "oklch(72% 0.0223 272.51)",
+          "oklch(84% 0.0139 272.51)",
+          "oklch(95% 0.0050 272.51)"
+        ]
+      },
+      "action-ink": {
+        "role": "neutral",
+        "displayName": "Action Ink",
+        "canonical": "#1b263c",
+        "tonalRamp": [
+          "oklch(15% 0.0154 263.43)",
+          "oklch(26% 0.0264 263.43)",
+          "oklch(38% 0.0353 263.43)",
+          "oklch(49% 0.0441 263.43)",
+          "oklch(61% 0.0441 263.43)",
+          "oklch(72% 0.0353 263.43)",
+          "oklch(84% 0.0220 263.43)",
+          "oklch(95% 0.0079 263.43)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error",
+        "canonical": "#ffc6bb",
+        "tonalRamp": [
+          "oklch(15% 0.0236 30.96)",
+          "oklch(26% 0.0404 30.96)",
+          "oklch(38% 0.0539 30.96)",
+          "oklch(49% 0.0674 30.96)",
+          "oklch(61% 0.0674 30.96)",
+          "oklch(72% 0.0539 30.96)",
+          "oklch(84% 0.0337 30.96)",
+          "oklch(95% 0.0121 30.96)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Current display typography"
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Current headline typography"
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Current body typography"
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Current label typography"
+      }
+    },
+    "shadows": [
+      {
+        "name": "demo-document",
+        "value": "0 18px 44px #102b6426",
+        "purpose": "Explanatory document scenes only"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Finite entrance and scene transitions"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "380px"
+      },
+      {
+        "name": "mobile",
+        "value": "700px"
+      },
+      {
+        "name": "tablet",
+        "value": "900px"
+      },
+      {
+        "name": "compact",
+        "value": "1000px"
+      },
+      {
+        "name": "wide",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary inquiry action.",
+      "html": "<button class=\"ds-primary\">문의 보내기</button>",
+      "css": ".ds-primary{font-family:Pretendard,sans-serif;font-size:16px;background:var(--accent,#aabaff);color:var(--on-accent,#111832);padding:14px 23px;border:0;border-radius:6px;min-height:56px;cursor:pointer}.ds-primary:hover{background:#c6d2ff}.ds-primary:focus-visible{outline:3px solid #aabaff;outline-offset:6px}.ds-primary:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Hero action",
+      "kind": "button",
+      "refersTo": "button-hero",
+      "description": "Pale action on charcoal.",
+      "html": "<button class=\"ds-hero\">프로젝트 문의하기</button>",
+      "css": ".ds-hero{font-family:Pretendard,sans-serif;font-size:16px;background:#e0e6fa;color:#1b263c;padding:14px 23px;border:0;border-radius:6px;min-height:56px;cursor:pointer}.ds-hero:hover{background:#c8d2ff}.ds-hero:focus-visible{outline:3px solid #aabaff;outline-offset:6px}.ds-hero:active{transform:scale(.98)}"
+    },
+    {
+      "name": "Contact field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Labeled inquiry input.",
+      "html": "<label class=\"ds-field\">성함<input placeholder=\"성함을 입력해 주세요\"></label>",
+      "css": ".ds-field{font-family:Pretendard,sans-serif;font-size:16px;color:#f2f4ef;display:block}.ds-field input{font-family:Pretendard,sans-serif;font-size:16px;display:block;width:100%;margin-top:10px;min-height:52px;padding:13px 15px;background:#191d24;border:1px solid #616976;border-radius:6px;color:#f2f4ef;caret-color:#aabaff}.ds-field input::placeholder{color:#adb4bb}.ds-field input:focus-visible{outline:2px solid #aabaff;outline-offset:3px}"
+    },
+    {
+      "name": "Navigation inquiry",
+      "kind": "nav",
+      "description": "Outlined header action.",
+      "html": "<a class=\"ds-nav-action\" href=\"#\">프로젝트 문의하기</a>",
+      "css": ".ds-nav-action{font-family:Pretendard,sans-serif;font-size:16px;display:inline-flex;align-items:center;min-height:56px;padding:14px 23px;background:transparent;border:1px solid #626c83;border-radius:6px;color:#f2f4ef;text-decoration:none}.ds-nav-action:hover{background:#292f3d}.ds-nav-action:focus-visible{outline:3px solid #aabaff;outline-offset:6px}"
+    },
+    {
+      "name": "FAQ disclosure",
+      "kind": "custom",
+      "description": "Native disclosure for project questions.",
+      "html": "<details class=\"ds-faq\"><summary>기획서가 없어도 문의할 수 있나요?</summary><p>아이디어부터 함께 정리합니다.</p></details>",
+      "css": ".ds-faq{font-family:Pretendard,sans-serif;font-size:16px;color:#f2f4ef;border-bottom:1px solid #616976}.ds-faq summary{padding:20px 16px;cursor:pointer}.ds-faq summary:hover{color:#aabaff}.ds-faq summary:focus-visible{outline:3px solid #aabaff;outline-offset:3px}.ds-faq p{padding:0 16px 20px;color:#adb4bb}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Night",
+    "overview": "The selected Night direction is the standalone NEOZUO website. A charcoal field, pale typography and restrained lavender frame the metallic N and concrete project stories. The identity comes from composition and service-specific detail, not competing colours.",
+    "keyCharacteristics": [
+      "Integrated metallic N, restrained palette, Korean-first typography.",
+      "Large explanatory scenes followed by concrete development responsibility.",
+      "Native forms, quiet rules and finite motion."
+    ],
+    "rules": [],
+    "dos": [
+      "Keep Korean headings natural and free of terminal full stops.",
+      "Keep inquiry and case exploration clear, keyboard accessible and responsive.",
+      "Label explanatory diagrams; use only established project facts.",
+      "Respect reduced motion and keep scene changes immediate for keyboard input."
+    ],
+    "donts": [
+      "Do not add competing accent colours or start a new theme exploration.",
+      "Do not invent screenshots, testimonials, metrics, prices or service promises.",
+      "Do not publish comparison routes or show version-switching controls in the canonical site."
+    ]
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "source": "jooyongDev/pmp-quiz",
+  "commit": "c3d4512b70641c81557ba3552defc55fc1e2655b",
+  "captured": "2026-11-01 Asia/Seoul",
+  "publication_authorized": "User requested curating and publishing these captures to neozuo.com on 2026-11-01.",
+  "method": "Fresh isolated clone and synthetic PostgreSQL/Redis database. Real Vue teacher console and Flutter student web build rendered in a separate headless Chrome profile with Playwright, deviceScaleFactor=3; captured as PNG at device scale. No upscaling, sharpening, fabricated screen content or production student data. Lossless WebP decoded pixels verified equal to PNG masters. Student captures remain Flutter web renders, not physical-device screenshots.",
+  "curation": "Main case story: actual HWPX upload and parsed-question review; the same test taken by the same synthetic student; 4/6 result; retry of questions 2 and 5 with Korean review notes; teacher attempt detail showing that exact result and those notes. Secondary: sequence and word rotation, varied question types, OMR marking, grading and its attached report. The homepage retains its dashboard/sentence-order pair.",
+  "files": [
+    {
+      "file": "assets/pmp/dashboard.webp",
+      "original": "dashboard.png",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 193490,
+      "sha256": "30910e899dee51a12343c9db15d67f92f3d156bd5b9e56f25da8305c05646fec",
+      "png_sha256": "43cfd5eeb963e6c100896b453a156a061ef7ea649fdfa5778b3a4a78cfa70b7b",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/sentence-order.webp",
+      "original": "sentence-order.png",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 62704,
+      "sha256": "46b29e30e7257d617af447af30a52cc7b87e03d27e5f79a105d444120df6b596",
+      "png_sha256": "e5e8f4010c08e974899de9e7ac9df987aa281fe752141150b62d4fc6da08450c",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/passage.webp",
+      "original": "passage.png",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 51388,
+      "sha256": "68cc30bddfeba42b295c393589c419cba5edce3fc4f62eb724998b5a4479ff98",
+      "png_sha256": "c6a2b5650877a710161c1fc5e126eac3bc728d2cfc99e80726ef61328bf6176f",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/word-order.webp",
+      "original": "word-order.png",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 44672,
+      "sha256": "3b174fd1dbc7d483532eb07fd80bfcac85693699ff9b7f326ae330368d1ca831",
+      "png_sha256": "95d88eda94a17062c04494b4aa06fb4c1cb2d32b68625b11cb524d7fb5a11d07",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/writing.webp",
+      "original": "writing.png",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 46372,
+      "sha256": "8dc1a82922edcc0038c03277fef2be73c14a1c0bf95adcfa0bee4954d0e70afd",
+      "png_sha256": "0c91b1546516a046f1cc2938baf001926f2bb431e84a7db7430b7d091c8bf0c4",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/omr-sheet.webp",
+      "original": "omr-sheet.png",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 25068,
+      "sha256": "65eee8091e8c95b06ddd27d4d6930ab6ba1b125a41ac1f3a4c3b8e1de7bc9432",
+      "png_sha256": "9c9e12ce3ac2fd40e9c00e913c6b609cec497c2049e824533758f4bbc8fe8cff",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/omr-submissions.webp",
+      "original": "omr-submissions.png",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 118860,
+      "sha256": "29ac466e8eb2ef5dd6ba08275c477226748be53ad0507244a40d794d2405a22c",
+      "png_sha256": "c08e51932019384d44a5e3c98fa4c1d4e1fb988d50a98297dac6e9b7eae3db79",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/omr-report.webp",
+      "original": "omr-report.png",
+      "pixel_width": 5130,
+      "pixel_height": 4521,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 1507,
+      "format": "lossless WebP",
+      "bytes": 117320,
+      "sha256": "e234fd9db38de142de8e16571b9f1f65134fbe0156ef774d172f94ffd9ec7058",
+      "png_sha256": "07f46ded4c60f6abb51318131e3cfb8ab5ce0b13f011bdadb0e88e06236f1c78",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/hwpx-review.webp",
+      "original": "hwpx-review.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 133282,
+      "sha256": "32b5debdc8340e5f8a593d60dd57bc16351d3d6afcbc30bc3d6c843cbe0301fe",
+      "png_sha256": "1ccc4e789b4166cb88367a26e1adfdd3eb7282cd26df7e49b03dd960f7d0903b",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/hwpx-upload.webp",
+      "original": "hwpx-upload.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 88350,
+      "sha256": "24c6d850a7cd5f7ee1170d1ff163e5bc994033da2dde0e2944ac30a4773e642e",
+      "png_sha256": "3132f7e2b3fbd39e037d1723ebcd265c04d14b6db1288f60a7ccf5fd2321ec31",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/rotation.webp",
+      "original": "rotation.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 84914,
+      "sha256": "f2f4849e0f7a36e974e2f682dc8cbc7361e06e12ce8826ddf0511a03658e89d1",
+      "png_sha256": "453d43ed8557c5bb02628b8ee60b217055da2bffc3f05e33e15e3d0dfaaaac91",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/sequence.webp",
+      "original": "sequence.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 85884,
+      "sha256": "81c614ab263d7bda033f1fce17f4a4553661b5fca5433cdbab008aa9f85f291a",
+      "png_sha256": "55df1437f6d910d1dd79b7f3144583dbf5630881ca273578948a963b9eddb13f",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/student-attempt.webp",
+      "original": "student-attempt.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 33640,
+      "sha256": "d1523fbc27880e934c94272653de7b6676b554816125aef8d4b4451c6b80b736",
+      "png_sha256": "cd71abb3f02ce2d5c0dc2b15ec21e7b092d3d02d9f5314ff27e9a81b9d056f90",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/student-result.webp",
+      "original": "student-result.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 62584,
+      "sha256": "cdde99d2a75586e997920d04811fffa554badd8b62678d5e50f364d04fe0afd4",
+      "png_sha256": "ee380d8da326a03475da9db1135e52ddf70d44992ce6721fcdc2a0689bc54a74",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/student-review.webp",
+      "original": "student-review.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 1170,
+      "pixel_height": 2532,
+      "density": 3,
+      "css_width": 390,
+      "css_height": 844,
+      "format": "lossless WebP",
+      "bytes": 40454,
+      "sha256": "ef2ea4b378c6cd429ebc1a8c889c6719da29fcdb95691cb7af97acb9c370c359",
+      "png_sha256": "2d72402010c913e2b7e2c0ffcdc17b7854cb646135f9f4c6c81137badf228c72",
+      "png_pixel_equality_verified": true
+    },
+    {
+      "file": "assets/pmp/teacher-attempt.webp",
+      "original": "teacher-attempt.png",
+      "capture_batch": "pmp-flow-originals",
+      "pixel_width": 5130,
+      "pixel_height": 2955,
+      "density": 3,
+      "css_width": 1710,
+      "css_height": 985,
+      "format": "lossless WebP",
+      "bytes": 145482,
+      "sha256": "423d842afdcea0e6d1dc1cc9a759be8ce5ca597a6a19c0ea9ca752195faab49c",
+      "png_sha256": "d6b560dbf7f7186b38efb0203bc22bc9b78a9ca72eda62a38b0755207bb3cfae",
+      "png_pixel_equality_verified": true
+    }
+  ],
+  "capture_settings": {
+    "student_viewport": [
+      390,
+      844
+    ],
+    "teacher_viewport": [
+      1710,
+      985
+    ],
+    "report_viewport": [
+      1710,
+      1507
+    ],
+    "device_scale_factor": 3,
+    "report_chart_canvas": [
+      2538,
+      720
+    ],
+    "report_chart_css": [
+      846,
+      240
+    ],
+    "report_focus_crop_css": [
+      534,
+      116,
+      912,
+      869
+    ]
+  },
+  "capture_environment_adjustments": [
+    "Forced Flutter semantics for accessible automation.",
+    "Capture-only compile flag suppresses split-screen anti-cheat detection in isolated desktop web capture.",
+    "Synthetic class membership, attempt progress, complex questions and OMR scores seeded locally; no production records used."
+  ],
+  "flow_capture": {
+    "date": "2026-11-01 Asia/Seoul",
+    "test": "고1 영어 · 독해와 어법",
+    "student": "박지민 (synthetic)",
+    "questions": 6,
+    "correct": 4,
+    "wrong_questions": [
+      2,
+      5
+    ],
+    "method": "Synthetic HWPX ZIP fixtures imported through the real parser and teacher UI. Student completed the actual exam and review using the Flutter web UI; real local APIs graded and persisted the answers and review notes. Sequence and rotation created through real local APIs and rendered in Vue. All source PNGs captured at DPR3, no image content edits. Temporary capture-only Flutter semantics and split-screen-detection flag as in the prior capture."
+  }
+}
