@@ -45,6 +45,7 @@ choices.forEach((input) =>
     if (
       answer?.animate &&
       !input.matches(":focus-visible") &&
+      document.documentElement?.dataset.motion !== "off" &&
       !window.matchMedia("(prefers-reduced-motion: reduce)").matches
     ) {
       stageAnimation = answer.animate(
@@ -57,7 +58,8 @@ choices.forEach((input) =>
     }
   }),
 );
-document.querySelector(".stage-continue")?.addEventListener("click", () => {
+const stageContinue = document.querySelector(".stage-continue");
+stageContinue?.addEventListener("click", (event) => {
   if (!message) return;
   const status = document.querySelector("#stage-status");
   if (!message.value.trim()) {
@@ -68,6 +70,16 @@ document.querySelector(".stage-continue")?.addEventListener("click", () => {
     status.textContent = "이미 작성한 문의 내용은 그대로 두었습니다.";
   }
   status.hidden = false;
+  // Night enters the form at the first incomplete contact field, not past it.
+  if (stageContinue.dataset?.entry === "contact") {
+    event.preventDefault();
+    const target =
+      document.querySelector('.form input[required]:not([type="checkbox"]):invalid') ||
+      message;
+    target.focus({ preventScroll: true });
+    target.scrollIntoView({ block: "center", behavior: "auto" });
+    return;
+  }
   message.focus({ preventScroll: true });
 });
 const form = document.querySelector(".form");

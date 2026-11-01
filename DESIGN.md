@@ -1,277 +1,147 @@
 ---
 name: NEOZUO
-description: A Korean development studio expressed through a monumental wordmark, cobalt fields, and calm functional surfaces.
+description: The selected Night design, promoted to the standalone website.
 colors:
-  blue: "#254bdf"
-  blue-dark: "#1733ad"
-  ink: "#182126"
-  muted: "#4c575c"
-  paper: "#f7f8f7"
-  surface: "#e9eeed"
-  white: "#fff"
-  mint: "#dbe8df"
-  light-blue: "#dfe6ff"
-  dark: "#172126"
-  dark-secondary-text: "#d7e1e5"
-  field-background: "#26353d"
-  field-border: "#65767f"
-  field-placeholder: "#b7c7cf"
-  error-text: "#ffd9d1"
-  choice-hover: "#dce2e0"
+  paper: "#111317"
+  ink: "#f2f4ef"
+  muted: "#adb4bb"
+  surface: "#22262e"
+  accent: "#aabaff"
+  on-accent: "#111832"
+  field: "#191d24"
+  line: "#616976"
+  rule: "#3e4652"
+  action: "#e0e6fa"
+  action-ink: "#1b263c"
+  error: "#ffc6bb"
 typography:
   display:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(80px, 23.4vw, 360px)"
-    fontWeight: 800
-    lineHeight: 0.96
+    fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif"
+    fontSize: "clamp(42px, 4.65vw, 72px)"
+    fontWeight: 500
+    lineHeight: 1.25
     letterSpacing: "-0.04em"
   headline:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(30px, 3.4vw, 52px)"
-    fontWeight: 650
-    lineHeight: 1.25
+    fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif"
+    fontSize: "clamp(32px, 3.6vw, 54px)"
+    fontWeight: 500
+    lineHeight: 1.24
     letterSpacing: "-0.035em"
-  title:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(23px, 2.2vw, 32px)"
-    fontWeight: 650
-    lineHeight: 1.25
-    letterSpacing: "-0.035em"
-  introduction:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(26px, 2.8vw, 42px)"
-    fontWeight: 550
-    lineHeight: 1.32
-    letterSpacing: "-0.03em"
   body:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "clamp(16px, 1.2vw, 18px)"
+    fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif"
+    fontSize: "17px"
     fontWeight: 400
-    lineHeight: 1.65
+    lineHeight: 1.7
   label:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
+    fontFamily: "Pretendard, -apple-system, BlinkMacSystemFont, \"Apple SD Gothic Neo\", \"Malgun Gothic\", sans-serif"
     fontSize: "16px"
-    fontWeight: 550
-    lineHeight: 1.65
-  small:
-    fontFamily: '"Pretendard Subset", "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif'
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: 1.65
+    fontWeight: 500
+    lineHeight: 1.7
 rounded:
-  control: "3px"
+  control: "6px"
+  figure: "8px"
 spacing:
-  compact: "8px"
-  small: "12px"
+  gutter: "clamp(22px, 4.2vw, 80px)"
   related: "16px"
-  field-gap: "20px"
-  control: "24px"
-  inset: "28px"
-  row: "32px"
-  group: "40px"
-  section-heading: "64px"
-  gutter: "clamp(20px, 3.4vw, 64px)"
-  section: "clamp(88px, 10vw, 160px)"
+  group: "32px"
 components:
   button-primary:
-    backgroundColor: "{colors.blue}"
-    textColor: "{colors.white}"
+    backgroundColor: "{colors.accent}"
+    textColor: "{colors.on-accent}"
     rounded: "{rounded.control}"
-    padding: "14px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.blue-dark}"
-    textColor: "{colors.white}"
-  button-small:
-    backgroundColor: "{colors.blue}"
-    textColor: "{colors.white}"
+    padding: "14px 23px"
+  button-hero:
+    backgroundColor: "{colors.action}"
+    textColor: "{colors.action-ink}"
     rounded: "{rounded.control}"
-    padding: "11px 18px"
-  button-ghost:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.control}"
-    padding: "14px 24px"
-  button-ghost-hover:
-    backgroundColor: "{colors.mint}"
-    textColor: "{colors.ink}"
-  text-link:
-    textColor: "inherit"
+    padding: "14px 23px"
   field:
-    backgroundColor: "{colors.field-background}"
-    textColor: "{colors.white}"
+    backgroundColor: "{colors.field}"
+    textColor: "{colors.ink}"
     rounded: "{rounded.control}"
-    padding: "12px 14px"
-  navigation:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-  stage-choice:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-    padding: "19px 24px"
-  stage-choice-selected:
-    backgroundColor: "{colors.blue}"
-    textColor: "{colors.white}"
-  project-panel:
-    backgroundColor: "{colors.light-blue}"
-    textColor: "{colors.ink}"
-    padding: "clamp(28px, 4vw, 64px)"
-  faq:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
-    padding: "20px 24px"
-  faq-open:
-    backgroundColor: "{colors.surface}"
-    textColor: "{colors.ink}"
-  wordmark:
-    textColor: "{colors.white}"
-    typography: "{typography.display}"
+    padding: "13px 15px"
 ---
 
 # Design System: NEOZUO
 
 ## Overview
 
-**Creative North Star: "Name as Monument"**
+**Creative North Star: "Night"**
 
-The name itself supplies the visual identity: large, tightly set NEOZUO lettering anchors broad cobalt and charcoal fields. Korean text stays plain and calm around that scale contrast. The result is confident without requiring decorative imagery or invented product screenshots.
+The selected Night direction is the standalone NEOZUO website. A charcoal field, pale typography and restrained lavender frame the metallic N and concrete project stories. The identity comes from composition and service-specific detail, not competing colours.
 
-Content surfaces use off-white and cool neutral fills, generous sectional space, and readable text blocks. Controls remain visibly functional, with native radio choices, disclosure rows, and labeled form fields. The document records the built system in styles.css, index.html, and site.js; page sequencing remains in the surface brief.
+Confirmed as the standalone site on 31 October 2026. Root `index.html`, `styles.css`, `assets/`, and `work/` are the implementation authority. Historical snapshots in `versions/` and `archive/` are excluded from deployment. Product claims remain governed by `PRODUCT.md`.
 
 **Key Characteristics:**
-
-- Monumental brand type with quiet explanatory copy.
-- Cobalt identity fields and actions, cool neutral reading surfaces.
-- Flat rectangular panels and minimally softened controls.
-- Korean-first typography, native semantics, and restrained state motion.
+- Integrated metallic N, restrained palette, Korean-first typography.
+- Large product exhibits and explanatory scenes followed by concrete development responsibility.
+- Native forms, quiet rules and finite motion.
 
 ## Colors
 
-A decisive cobalt identity sits against cool paper and low-chroma work surfaces. The frontmatter owns the exact color values; the descriptions below assign their roles.
-
-### Primary
-
-- **Cobalt (`blue`)**: the broad hero field, selected stage choice, primary button, and small functional accents.
-- **Deep Cobalt (`blue-dark`)**: primary-button hover state on fine-pointer devices.
-- **Pale Cobalt (`light-blue`)**: feature-case and case inquiry panels; a restrained continuation of the identity color.
-
-### Neutral
-
-- **Paper (`paper`)**: main reading canvas and inset content surfaces.
-- **Cool Surface (`surface`)**: alternating service/process sections, unselected choices, and open disclosures.
-- **Ink (`ink`)** and **Muted Ink (`muted`)**: primary and supporting text on light backgrounds.
-- **Charcoal (`dark`)**: dark project, inquiry, and closing fields. It is a distinct source value from Ink.
-- **White (`white`)** and **Dark Secondary Text (`dark-secondary-text`)**: primary and supporting content on dark fields.
-- **Pale Mint (`mint`)**: a quiet project-panel surface.
-- **Field Background, Field Border, Field Placeholder**: dark-form input contrast and boundary roles.
-- **Error Text (`error-text`)**: readable form failure feedback on charcoal.
-- **Choice Hover (`choice-hover`)**: unselected stage-row hover feedback.
-
-**The Cobalt Anchor Rule.** Use cobalt for identity fields, primary actions, and selected choices. Keep long reading passages on paper, neutral, or dark surfaces.
+Charcoal is the page surface; pale text and lavender provide hierarchy and controls. Primary hero and case-inquiry actions use the lighter action surface. Fields and separators remain legible against dark surfaces. Project diagrams retain their lighter explanatory surfaces and approved product captures retain their original interface colours; neither adds a company brand palette.
 
 ## Typography
 
-**Display Font:** Pretendard Subset, with Pretendard Variable, Pretendard, and the Korean-capable system fallbacks recorded in frontmatter.
-
-**Body Font:** the same family stack. The bundled variable subset declares weights from 45 to 920 and uses font-display: swap. There is no separate mono or ornamental face.
-
-The family unifies Latin identity and Korean prose. Weight, scale, and tracking create the hierarchy; text does not rely on a second font for decoration. Body copy uses word-break: keep-all, headings use balanced wrapping, and paragraphs use pretty wrapping.
-
-### Hierarchy
-
-- **Display:** heavy, tightly set wordmark. At the mobile breakpoint its size changes to 23.1vw; on wide screens it caps at 360px.
-- **Headline:** section-level Korean headings, with the fluid size and tight tracking in frontmatter.
-- **Title:** the base subheading role. Specific observed patterns include 26px process headings, 24px stage-answer headings, and fluid 30–54px featured-project titles.
-- **Introduction:** the quiet statement accompanying the wordmark. Its mobile size is 27px.
-- **Body:** fluid 16–18px reading text. Local supporting blocks generally stop around 32–50ch rather than spanning a full wide column.
-- **Label:** visible field labels; navigation uses 16px regular text, while button labels use weight 600.
-- **Small:** help, captions, and legal supporting text. Some secondary labels use 15px; the mobile footer uses 13px.
-
-**The Name Carries Scale Rule.** Reserve the monumental display treatment for the NEOZUO wordmark; explanatory Korean headings use the smaller headline and title roles.
+Self-hosted Pretendard is the common face. The subset contains current homepage, cases, utility pages, and dynamic Korean control copy. Header sizes recompose on mobile; do not shrink body text to fit a desktop diagram. Case names use a light 56–92px display scale and 54–60px on narrow screens; narrative copy is 16–18px with a 72ch maximum measure. Controls retain explicit labels.
 
 ## Layout
 
-A centered wrapper caps at 1600px with the fluid gutter in frontmatter. Long-form legal and case content uses a 900px maximum wrapper. Wide-screen sections use generous fluid vertical spacing; at 700px and below section padding becomes 80px.
-
-The composition combines broad full-width color fields with asymmetric text columns. Stage content uses a 5:7 grid with a 9% gap; process and contact use equal columns with a 10% gap. Service rows use three columns, 32px padding, and small gaps between flat bands. Project panels use a featured two-column composition followed by two secondary panels. FAQ content is indented 32% on desktop and 23% at the intermediate breakpoint.
-
-At 1000px and below, column gaps tighten, service rows become two columns, and project titles simplify to fixed sizes. At 700px and below, major content grids become single-column, FAQ indentation disappears, form rows stack, and supporting navigation links hide while the inquiry action remains visible. The header reduces from 96px to 76px high. At 1600px and above, the wordmark uses its fixed maximum size.
-
-Use the observed spacing steps as a vocabulary, not a rigid mathematical scale. Inputs have a 10px label separation, form rows a 20px gap, and form groups a 26px gap that becomes 24px on mobile. The stage-answer block reserves vertical space to reduce layout jumps during selection.
+The shared wrapper has a 1600px maximum width and fluid gutters. Homepage hero and case stories retain the confirmed B composition. Case pages use a two-column opening, a large service exhibit, and a sticky desktop section index; mobile stacks the title, facts, exhibit and narrative. PMP uses approved teacher/student captures; the other cases retain explanatory diagrams. PMP's exhibit sequence and responsive behavior are recorded in `work/DESIGN.md`. Utility pages use a readable central column. Key breakpoints are 1100, 1000, 900, 700 and 380px depending on the component.
 
 ## Elevation & Depth
 
-The system uses no box shadows. Depth comes from alternating tonal fields, inset light panels, and the strongly contrasting dark close. Fields alone use a visible thin boundary; large content panels do not need ornamental outlines. Focus outlines indicate interaction rather than elevation.
-
-**The Flat Surface Rule.** Separate content through fill, spacing, and type hierarchy. The built system has no box shadows.
+The site relies on tonal surfaces and fine rules. The metallic N provides the main spatial image. Shadows are confined to explanatory device/document scenes, not generic marketing cards. Preserve the transparent sculpture edge.
 
 ## Shapes
 
-Large content panels, workflow nodes, stage choices, and disclosures are rectangular. Buttons and fields use the small control radius in frontmatter. Native checkboxes retain their recognizable control shape with cobalt accent color. Outline SVGs use rounded caps and joins, a 1.7px stroke, and a normal 24px square footprint; FAQ icons reduce to 20px on mobile.
+Controls use subtly softened corners. Explanatory scenes retain their existing 8px outer corners and document/device geometry. Browser selection, caret, focus and scrollbar colours belong to the same palette.
 
 ## Components
 
-### Buttons
-
-Primary buttons are firm, compact rectangles: cobalt with white text, weight 600, a 24px internal gap, and a minimum height of 52px. The compact navigation variant is at least 46px high; form submission is at least 60px high and aligns label and arrow to opposite ends. Fine-pointer hover deepens the blue; active presses scale to 0.98. A disabled submitting button uses a waiting cursor and reduced opacity.
-
-Ghost buttons use the cool surface with ink text at rest and pale mint with ink text on fine-pointer hover.
-
-Buttons transition color over 160ms with ease and press transforms over 140ms with the shared custom ease-out curve. Keyboard presses do not scale. Disabled buttons do not respond to press transforms. Keyboard focus uses a 3px outline. Primary buttons use cobalt on light surfaces and white on the dark inquiry surface, rather than inheriting white text on a white background. FAQ focus is inset into its whole-row target. Text links provide a 44px minimum target, underline on hover, and move an accompanying SVG by 4px over 180ms using the source ease curve.
-
-### Stage Choices
-
-Native radio inputs are visually hidden inside large clickable rectangular labels. Selection switches from a cool neutral fill to cobalt/white and reveals an SVG check. The focus ring surrounds the whole label. An adjacent polite live region updates the matching next step. The continue action is a pale-cobalt button-like link aligned with its helper text. It seeds an empty inquiry message, preserves existing user text, and focuses and navigates to the message field. Pointer selection receives a 160ms answer transition; keyboard selection is immediate, and reduced motion disables the transition. The desktop answer block reserves 205px; intermediate and mobile reservations remain 275px and 240px. Without JavaScript, the fieldset remains disabled and fallback explanatory text remains available.
-
-### Cards / Containers
-
-These are broad, flat project panels rather than floating cards. Pale cobalt, charcoal, and pale mint differentiate the existing project stories. Default internal padding is fluid; mobile uses 28px. The workflow illustration is built from rectangular text nodes, narrow connectors, and a caption explaining its schematic status. Do not treat it as a product screenshot.
-
-### Inputs / Fields
-
-Dark form fields use a lighter charcoal fill, thin visible border, white text and caret, and the small control radius. Text inputs are at least 50px high; the textarea is at least 160px high and resizes vertically. Focus adds a 2px white outline offset by 3px. Labels remain visible, optional/required hints remain explicit, and the native checkbox carries consent.
-
-The form uses native validity checks, an announced sending state, a disabled submit button while sending, and a visible alert on failure that retains the entered content. A successful response redirects to the existing thank-you route. Do not infer any extra validation color system from the single error-text role.
-
-### Navigation
-
-An ordinary light header pairs a lowercase heavy wordmark with three text destinations and a compact cobalt inquiry action. The small blue dot is part of the built wordmark treatment. Text destinations underline on hover. The mobile header keeps the wordmark and inquiry action without adding a drawer.
-
-### FAQ
-
-Native details/summary elements form generously padded rows. An opened disclosure gains the cool surface fill and rotates its SVG chevron by 180 degrees. The entire padded question row is the native summary target. Answers have separate side and bottom insets, muted text and a readable maximum line length. The chevron uses a 160ms transition; keyboard and reduced-motion interaction are immediate. Focus styling and keyboard interaction follow the native summary element.
-
-### Monument Wordmark
-
-The NEOZUO name appears as large, unbroken type on cobalt and again as a top-of-page link in the dark footer. Tight tracking, compact line height, and a small optical left offset create its solid silhouette. Its display treatment belongs to the identity, not to a reusable generic marketing headline.
-
-### Motion and Accessibility
-
-Motion is limited to interaction feedback, one short pointer-triggered stage-answer transition, and smooth anchor scrolling. Keyboard anchor navigation is immediate. Navigation links have a minimum 44px target height. The dark form declares its native color scheme, and consent has an explicit visible focus ring. The reduced-motion query disables transitions and animations, changes anchor scrolling to auto, and removes hover arrow translation. The page provides a focusable skip link, semantic landmarks, headings, native form labels, and state announcements. Preserve these behaviors when extending the visual patterns.
+- Navigation connects the homepage, cases and inquiry; no comparison bar appears on canonical pages.
+- On the desktop homepage, the metallic N continues behind the navigation without a clipped top edge. The sticky header uses a fading scrim at the top, then a dark translucent backdrop after scrolling; reduced motion disables the transition. Mobile and detail-page navigation retain their existing composition.
+- Primary actions have a visible focus ring and restrained press feedback. Header inquiry uses an outlined treatment.
+- Native radio options prepare inquiry text without overwriting a draft. The continuation enters at the first incomplete contact field.
+- Native FAQ disclosure keeps keyboard behavior. Forms retain success, failure, loading and duplicate-submit protection.
+- PMP product images open in a native dialog with keyboard dismissal and focus restoration. Direct original-image links remain usable without JavaScript; the scoped exhibit behavior is recorded in `work/DESIGN.md`.
+- Motion follows the Emil design engineering principles. The restored homepage retains the earlier short hero opening and once-only exhibit entrances. The later PMP-only focal sequence was rolled back. Detail pages retain their quiet text/diagram entrances. Keep 140–220ms control feedback and do not reveal every body section.
+- On desktop with a mouse, the N responds with a damped movement of at most 7px horizontally and 5px vertically. Its frame loop stops when settled and resets on scroll, lost focus, a hidden tab, keyboard input or motion opt-out. Mobile has no pointer-follow effect. No idle sculpture animation or scroll interception.
+- A motion control is available in the footer; OS reduced-motion preference is respected. Keyboard input cancels decorative motion and keeps state changes immediate. Use transform and opacity; no animation dependency is needed.
+- Privacy, confirmation and error pages share the site's typography, navigation and palette. Policy wording is preserved.
 
 ## Do's and Don'ts
 
-### Do:
+- Keep Korean headings natural and free of terminal full stops.
+- Keep inquiry and case exploration clear, keyboard accessible and responsive.
+- Label explanatory diagrams and disclose example data and capture method for approved product images; use only established project facts.
+- Respect reduced motion and keep scene changes immediate for keyboard input.
+- Do not add competing accent colours or start a new theme exploration.
+- Do not invent screenshots, testimonials, metrics, prices or service promises.
+- Do not publish comparison routes or show version-switching controls in the canonical site.
 
-- Do keep Korean words together and use balanced heading wraps with readable explanatory line lengths.
-- Do use the existing cobalt, paper, neutral, and dark surface relationships.
-- Do preserve native labels, radio selection, disclosure behavior, visible focus, and reduced-motion support.
-- Do keep project imagery factual; use clearly captioned schematic diagrams when demonstrating a workflow.
-- Do retain the display wordmark as a brand signature while scaling functional text independently.
+### Homepage PMP exhibit, 1 November 2026
 
-### Don't:
+The PMP exhibit now composes its unchanged dashboard and sentence-order captures into one graphite scene: a large web window behind a thin app frame. Keep the palette restrained, the source screenshots sharp and independently zoomable, and labels outside the device silhouettes. The composition stays compact on mobile. Matching detail-page treatments and verification are recorded in `work/DESIGN.md`; source imagery and factual copy are unchanged.
 
-- Don't introduce decorative gradients, floating card shadows, or pill-shaped versions of these rectangular surfaces.
-- Don't turn every heading into monumental display type.
-- Don't replace visible form labels or native controls with decorative approximations.
-- Don't use stock photography, fabricated screenshots, client logos, testimonials, or result metrics as proof without approved source material.
+### Superseded homepage experiments — historical record
 
+**Rollback requested 1 November 2026:** The active site is the UI-illustration snapshot verified at 17:19:57 KST, before every experiment below. All 41 public file hashes match that snapshot. The subsequent refinements below are history, not instructions for the active site. The latest authority is `docs/homepage-design.md`.
 
-## Korean copy conventions
+### Homepage refinement, 1 November 2026
 
-- Headings, navigation labels, and buttons have no terminal full stop. Questions keep a question mark; explanatory sentences use full stops.
-- Use familiar section labels: 개발 분야, 개발 사례, 진행 절차, 자주 묻는 질문, 프로젝트 문의.
-- Company explanations use 합니다체; questions and input guidance use polite conversational Korean.
-- Name concrete work and outcomes. Avoid vague metaphors such as “다음 단계를 만들다”, “일을 연결하다”, or “코드를 이어가다”.
-- Distinguish opening an inquiry from sending one: 프로젝트 문의하기 → 문의 내용 작성하기 → 문의 보내기.
-- Write natural Korean first, then adjust layout and line breaks. Do not omit grammar to fit a visual line.
-- Keep unconfirmed prices, report schedules, support periods, and SLAs out of public promises.
+The owner requested animate, colorize, typeset and distill together. [The homepage surface brief](docs/homepage-design.md) records its current scoped type roles, restrained lavender action colors, optional writing helper within the inquiry section, removed repetition and one PMP composition sequence. This refinement keeps the Night identity and shared detail-page typography. Homepage CSS variables override the older shared role examples above; the design sidecar and unrelated detector configuration were not repaired as a side effect.
+
+Published to Firebase Hosting `neozuo-homepage`. Live verification at 2026-11-01T17:43:53.567161+09:00 matched all 41 public files and confirmed nine internal routes remain excluded. Live desktop/mobile helper, draft preservation, mocked form failure/retry/success, image viewer, type reflow and motion checks passed with no page errors. A fresh 768px live render also confirmed the tablet composition. No real inquiry was sent.
+
+### Homepage layout revision, 1 November 2026
+
+The owner rejected adding generated imagery as the response to a plain layout. That unpublished experiment was rolled back. The homepage now changes composition using existing assets: a lead PMP feature, an open asymmetric secondary-case spread, a two-level capability surface, a connected process path and FAQ groups. `assets/home-layout.css` is homepage-only; [the surface brief](docs/homepage-design.md) records its reading order, breakpoints and verification. Hero, actual source images, case pages, form behavior and motion are preserved.
+
+### Homepage critique follow-up, 1 November 2026
+
+The accepted critique restores a visible standalone project-stage selector, separate from contact. A restrained silver response pane carries the selected service guidance; technical capabilities below have equal tonal weight. Cases lead into a concise inquiry bridge, secondary descriptions no longer enumerate the diagrams, and the process uses a continuous aligned path. Homepage image viewers start fitted and expose enlargement links outside the devices. Same-tab inquiry drafts expire after one hour and clear on successful submission. The current details and verification supersede earlier helper-disclosure and capability-surface notes in [the surface brief](docs/homepage-design.md).
+
+### Development-case simplification, 1 November 2026
+
+The homepage now uses an ordinary section heading above one lead PMP text/exhibit pair and two compact aligned viliv/allclass summaries. Remove the earlier sticky section rail, asymmetric secondary offset and homepage-only diagrams. Full diagrams remain on case detail routes. Preserve actual screenshot sources, fitted enlargement, capture disclosures, case anchors and inquiry navigation. The [homepage brief](docs/homepage-design.md) records current structure and checks. All four process steps retain their owner-approved uniform background.

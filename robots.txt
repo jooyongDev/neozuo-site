@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /thanks.html
+Disallow: /versions/
+Disallow: /archive/
 
 Sitemap: https://neozuo.com/sitemap.xml

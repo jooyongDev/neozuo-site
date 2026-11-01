@@ -1,168 +1,57 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>allclass 학원 강의 마켓플레이스 · NEOZUO 사례</title>
-    <meta
-      name="description"
-      content="학원이 녹화 강의를 중·고등학생에게 직접 판매하는 마켓플레이스 올클래스(allclass). 강사·학생용 웹·앱, AI 강의 분석 연동, 토스 결제, 판매자 정산."
-    />
-    <link rel="canonical" href="https://neozuo.com/work/allclass.html" />
-    <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="NEOZUO" />
-    <meta
-      property="og:title"
-      content="allclass 온라인 강의 판매·수강 플랫폼"
-    />
-    <meta
-      property="og:description"
-      content="강사·학생용 웹·앱, AI 강의 분석 연동, 웹 결제, 판매 정산. 웹 클로즈드 베타 운영 중."
-    />
-    <meta property="og:url" content="https://neozuo.com/work/allclass.html" />
-    <meta property="og:image" content="https://neozuo.com/og.png" />
-    <meta property="og:locale" content="ko_KR" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link
-      rel="preload"
-      href="/fonts/pretendard-subset.woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
-    /></noscript>
-    <link rel="stylesheet" href="/styles.css" />
-  </head>
-  <body>
-    <header class="nav">
-      <div class="wrap nav-inner">
-        <a class="logo" href="/">NEOZUO</a>
-        <nav aria-label="주요 메뉴">
-          <a href="/#work">개발 사례</a>
-          <a href="/#process">진행 절차</a>
-          <a class="btn btn-sm" href="/#contact">프로젝트 문의하기</a>
-        </nav>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111317">
+  <title>allclass 개발 사례 · NEOZUO</title>
+  <meta name="description" content="학원이 녹화 강의를 판매하고, 학생이 구매해 공부하는 강의 마켓플레이스입니다. 강사와 학생의 웹·앱을 함께 개발했습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="NEOZUO">
+  <meta property="og:title" content="allclass 개발 사례 · NEOZUO">
+  <meta property="og:description" content="학원이 녹화 강의를 판매하고, 학생이 구매해 공부하는 강의 마켓플레이스입니다. 강사와 학생의 웹·앱을 함께 개발했습니다.">
+  <meta property="og:url" content="https://neozuo.com/work/allclass.html">
+  <meta property="og:image" content="https://neozuo.com/og.png?v=20261031-main1">
+  <meta property="og:locale" content="ko_KR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://neozuo.com/work/allclass.html">
+  <link rel="icon" href="/favicon.svg?v=20261031-main1" type="image/svg+xml">
+  <link rel="preload" href="/fonts/pretendard-subset.woff2?v=20261101-flow1" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/base.css?v=20261101-flow1">
+  <link rel="stylesheet" href="/assets/showcase.css?v=20261031-main1">
+  <link rel="stylesheet" href="/styles.css?v=20261031-motion2">
+  <link rel="stylesheet" href="/assets/case.css?v=20261031-main1">
+  <script src="/assets/motion.js?v=20261031-motion2" defer></script>
+  <script src="/assets/showcase.js?v=20261031-main1" defer></script>
+</head>
+<body class="theme-night case-page" id="top">
+  <a class="skip-link" href="#main">본문으로 이동</a>
+  <header class="nav"><div class="wrap nav-inner">
+    <a class="logo" href="/" aria-label="NEOZUO 홈페이지">neozuo<span>.</span></a>
+    <nav aria-label="주요 메뉴"><a href="/#work">개발 사례</a><a href="/#process">진행 절차</a><a class="btn" href="/#contact">프로젝트 문의하기<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></nav>
+  </div></header>
+  <main id="main">
+    <section class="hero detail-hero wrap" aria-labelledby="case-title">
+      <div class="detail-heading"><h1 id="case-title">allclass<span>강의 판매부터<br>수강·숙제·정산까지</span></h1><p>학원이 녹화 강의를 판매하고, 학생이 구매해 공부하는 강의 마켓플레이스입니다. 강사와 학생의 웹·앱을 함께 개발했습니다.</p></div>
+      <dl class="detail-facts"><div><dt>고객</dt><dd>viliv</dd></div><div><dt>맡은 범위</dt><dd>강사·학생용 웹·앱 · 백엔드 · AI 연동 · 결제·정산</dd></div><div><dt>참여 형태</dt><dd>신규 구축</dd></div><div><dt>현재 상태</dt><dd>2026년 9월부터 웹 비공개 베타 · 앱 스토어 출시 전</dd></div></dl>
+    </section>
+    <div class="wrap"><div class="detail-showcase case-allclass"><figure class="project-visual allclass-visual">
+  <div class="course-side"><span>강사</span><strong>강의를 <br>등록하고 판매</strong><div class="course-stack" aria-hidden="true"><div></div><div></div><div><svg viewBox="0 0 48 48"><path d="m19 14 16 10-16 10Z" /></svg><span>온라인 강의</span></div></div><p>판매 내역 · 정산 확인</p></div>
+  <div class="course-connection" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></div>
+  <div class="course-side student-side"><span>학생</span><strong>웹과 앱에서 <br>이어지는 수강</strong><div class="lesson-list"><div><i></i><span>강의 결제</span></div><div><i></i><span>웹·앱 수강</span></div><div><i></i><span>숙제 제출</span></div></div><p>배우는 과정이 한곳에</p></div>
+  <figcaption>allclass의 서비스 구성을 설명한 도식</figcaption>
+</figure></div></div>
+    <div class="wrap story-layout">
+      <nav class="story-nav" aria-label="사례 목차"><a href="#challenge">프로젝트 과제</a><a href="#development">개발 내용</a><a href="#result">출시·운영</a></nav>
+      <div class="story-content">
+        <section class="story-section" id="challenge" aria-labelledby="challenge-title"><h2 id="challenge-title">강의를 파는 학원과<br>수강하는 학생이 만나는 곳</h2><div class="story-prose"><p>학원이 중·고등학생에게 녹화 강의를 직접 판매하는 서비스입니다. 강사는 강의를 등록하고 판매·정산을 관리하고, 학생은 구매부터 수강·숙제까지 한곳에서 할 수 있어야 했습니다.</p><p>강사와 학생을 위한 웹·앱, 백엔드, 결제·정산 기능과 AI 강의 분석 연동을 개발했습니다.</p></div></section>
+        <section class="story-section" id="development" aria-labelledby="development-title"><h2 id="development-title">등록·판매·학습·정산을<br>하나의 흐름으로 구성했습니다</h2><ol class="development-steps"><li><div class="step-heading"><h3>강의 등록과 판매 준비</h3><p>강사용 웹·앱</p></div><p>강사는 강의를 만들고 영상을 업로드합니다. 커리큘럼을 제출해 심사를 받고, 판매 가격을 설정합니다. 강의 등록 과정에 AI 자막·퀴즈·챗봇 기능을 연동했습니다.</p></li><li><div class="step-heading"><h3>구매부터 수강과 숙제까지</h3><p>학생용 웹·앱 · 웹 결제</p></div><p>학생은 강의를 탐색하고 웹에서 토스페이먼츠로 결제합니다. 개별 구매와 구독 결제를 지원하며, 웹·앱 수강, 숙제 제출, 수강 후기를 구현했습니다.</p></li><li><div class="step-heading"><h3>판매 내역과 정산 확인</h3><p>판매 관리 · 정산</p></div><p>강사는 판매 내역과 정산을 확인합니다. 강의를 판매한 학원에 월 단위로 정산하는 구조를 구현했습니다.</p></li></ol></section>
+        <section class="story-section result-section" id="result" aria-labelledby="result-title"><h2 id="result-title">웹에서 비공개 베타를<br>진행하고 있습니다</h2><div class="story-prose"><p>2026년 9월부터 웹 비공개 베타를 운영하고 있습니다. 강사·학생용 모바일 앱도 개발 범위에 포함되며, 아직 App Store·Google Play에 출시되지 않았습니다.</p><a class="text-link" href="https://allclass.kr" target="_blank" rel="noopener">allclass 웹사이트 보기<span class="sr-only"> (새 창)</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></div><div class="technology"><h3>사용 기술</h3><dl><div><dt>Flutter</dt><dd>강사·학생용 웹·앱</dd></div><div><dt>FastAPI</dt><dd>백엔드</dd></div><div><dt>토스페이먼츠</dt><dd>웹 결제</dd></div></dl></div></section>
       </div>
-    </header>
-
-    <main class="section case">
-      <div class="wrap narrow">
-        <p class="case-backlink">
-          <a href="/#work">개발 사례</a> · 에듀테크 · 강의 마켓플레이스
-        </p>
-        <h1 class="case-title">
-          allclass 온라인 강의 판매·수강 플랫폼
-        </h1>
-
-        <dl class="facts">
-          <div>
-            <dt>고객</dt>
-            <dd>에듀테크 기업 viliv</dd>
-          </div>
-          <div>
-            <dt>개발 범위</dt>
-            <dd>
-              강사용 웹·앱 · 학생용 웹·앱 · 백엔드 · AI 강의 분석 연동 ·
-              결제·정산
-            </dd>
-          </div>
-          <div>
-            <dt>형태</dt>
-            <dd>신규 구축</dd>
-          </div>
-          <div>
-            <dt>상태</dt>
-            <dd>
-              2026년 9월부터 웹에서 클로즈드 베타 운영 중 (모바일 앱은 스토어
-              출시 전)
-            </dd>
-          </div>
-          <div>
-            <dt>서비스</dt>
-            <dd>
-              <a href="https://allclass.kr" target="_blank" rel="noopener"
-                >allclass.kr</a
-              >
-            </dd>
-          </div>
-        </dl>
-
-        <h2>과제</h2>
-        <p>
-          학원이 녹화 강의를 중·고등학생에게 직접 판매하는 마켓플레이스가
-          필요했습니다. 학원은 강의를 운영하고 판매 대금을 정산할 수 있어야
-          했습니다. 학생에게는 강의 구매와 수강, 숙제를 한곳에서 제공해야
-          했습니다.
-        </p>
-
-        <h2>주요 개발 내용</h2>
-        <ul class="did">
-          <li>
-            <strong>원장·강사용 웹·앱</strong> 클래스를 개설하고 강의를 등록할
-            수 있습니다. 강의계획서 제출·검토, 가격 설정, 정산 확인 기능을
-            개발했습니다.
-          </li>
-          <li>
-            <strong>AI 강의 분석 연동</strong> 강의를 등록하면 자막과 퀴즈를
-            생성하고, 강의 내용을 질문할 수 있는 AI 채팅 기능을 연동했습니다.
-          </li>
-          <li>
-            <strong>학생용 웹·앱</strong> 강의 검색과 수강, 숙제, 후기 기능을
-            개발했습니다. 웹에서는 토스 결제로 강의를 개별 구매하거나 구독할 수
-            있습니다.
-          </li>
-          <li>
-            <strong>판매 학원 정산</strong> 판매 학원의 강의 판매 대금을 월별로
-            정산합니다.
-          </li>
-        </ul>
-
-        <h2>결과</h2>
-        <p>2026년 9월 웹에서 클로즈드 베타를 열고 운영 중입니다.</p>
-
-        <h2>기술 스택</h2>
-        <p class="stack">Flutter (웹·앱) · FastAPI (백엔드) · 토스 결제</p>
-
-        <div class="case-cta">
-          <h2>강의 판매·수강 서비스를 준비하고 계신가요?</h2>
-          <p>
-            기획서가 없어도 문의할 수 있습니다. 만들고 싶은 서비스나 필요한
-            기능을 알려주세요.
-          </p>
-          <a class="btn" href="/#contact">프로젝트 문의하기</a>
-          <a class="btn btn-ghost" href="/work/pmp.html"
-            >다른 사례: PMP 영어학원</a
-          >
-        </div>
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="wrap">
-        <p class="logo">NEOZUO</p>
-        <p class="biz">
-          <span class="nw">상호: 네오주오(NEOZUO)</span> ·
-          <span class="nw">대표자: 김주용</span> ·
-          <span class="nw">사업자등록번호: 517-13-02812</span><br />
-          이메일: <a href="mailto:dev@neozuo.com">dev@neozuo.com</a> ·
-          <a href="https://pf.kakao.com/_DmxirX" target="_blank" rel="noopener"
-            >카카오톡 채널</a
-          >
-          · <a href="/privacy.html">개인정보처리방침</a>
-        </p>
-        <p class="copy">© 2026 NEOZUO. All rights reserved.</p>
-      </div>
-    </footer>
-  </body>
+    </div>
+    <section class="case-contact wrap" aria-labelledby="contact-title"><div><h2 id="contact-title">판매자와 구매자를 연결하는<br>플랫폼을 준비하고 계신가요?</h2><p>누가 무엇을 판매하고 어떻게 이용하는지 알려주세요. 사용자별 기능과 결제·운영 범위를 함께 정리합니다.</p></div><a class="btn" href="/#contact">프로젝트 문의하기<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></section>
+    <nav class="case-next wrap" aria-label="다른 개발 사례"><a class="all-cases" href="/#work">모든 개발 사례</a><a class="next-project" href="/work/pmp.html"><span>다음 사례</span><strong>PMP</strong><p>반별 출제부터 학생의 오답 복습까지</p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></nav>
+  </main>
+  <footer class="case-footer wrap"><a class="logo" href="/">neozuo<span>.</span></a><p>네오주오(NEOZUO) · 대표자 김주용<br>사업자등록번호 517-13-02812<br><a href="mailto:dev@neozuo.com">dev@neozuo.com</a></p><div><a href="/privacy.html">개인정보처리방침</a><p>© 2026 NEOZUO</p><div class="site-tools" data-motion-slot></div></div></footer>
+</body>
 </html>

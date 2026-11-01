@@ -3,19 +3,19 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('site.js', 'utf8');
-function setup(fetchResult) {
+function setup(fetchResult, {nightEntry = false, missingContact = null} = {}) {
   const button = {disabled:false,innerHTML:'문의 보내기'};
   const error = {hidden:true};
   const progress = {hidden:true};
-  const message = {value:'',focused:false,focus(){this.focused=true;}};
+  const message = {value:'',focused:false,focus(){this.focused=true;},scrollIntoView(){this.scrolled=true;}};
   const nodes = {'#contact-message':message,'#stage-status':{hidden:true},'#stage-title':{},'#stage-description':{},'#stage-preparation':{}};
   const choices = ['idea','build','existing','operate'].map(value=>({value,checked:false,addEventListener(t,fn){this.change=fn;}}));
-  const continuation = {addEventListener(t,fn){this.click=fn;}};
+  const continuation = {dataset:nightEntry ? {entry:'contact'} : {},addEventListener(t,fn){this.click=fn;}};
   let submit, destination, calls=0, valid=true;
   const form = {action:'https://api.web3forms.com/submit',reportValidity:()=>valid,
     querySelector:s=>({'button[type="submit"]':button,'.form-error':error,'.form-progress':progress}[s]),
     addEventListener:(t,fn)=>submit=fn,setAttribute(){},removeAttribute(){}};
-  const context = {document:{querySelector:s=>s==='.form'?form:s==='.stage-continue'?continuation:nodes[s],querySelectorAll:()=>choices},
+  const context = {document:{querySelector:s=>s==='.form input[required]:not([type="checkbox"]):invalid'?missingContact:s==='.form'?form:s==='.stage-continue'?continuation:nodes[s],querySelectorAll:()=>choices},
     fetch:async()=>{calls++;return fetchResult();},FormData:class{},AbortController,
     setTimeout,clearTimeout,window:{location:{assign:path=>destination=path}}};
   vm.runInNewContext(source,context);
@@ -36,4 +36,26 @@ test('invalid form never sends',async()=>{const s=setup(()=>{});s.invalidate();a
 test('all project stages change guidance and prefill without overwriting a draft',()=>{
   const s=setup(()=>{});
   for(const radio of s.choices){radio.checked=true;radio.change();assert.ok(s.nodes['#stage-title'].textContent);s.message.value='';s.continuation.click();assert.ok(s.message.value.length>10);assert.equal(s.message.focused,true);s.message.value='나의 기존 문의';s.continuation.click();assert.equal(s.message.value,'나의 기존 문의');}
+});
+test('Night prepares a message but enters at the first incomplete contact field',()=>{
+  const field = {focus(){this.focused=true;},scrollIntoView(){this.scrolled=true;}};
+  const s=setup(()=>{}, {nightEntry:true,missingContact:field});
+  let prevented=false;
+  s.continuation.click({preventDefault(){prevented=true;}});
+  assert.ok(s.message.value.length>10);
+  assert.equal(field.focused,true);
+  assert.equal(field.scrolled,true);
+  assert.equal(s.message.focused,false);
+  assert.equal(prevented,true);
+  assert.equal(s.calls,0);
+});
+test('Night returns to the message when contact fields are complete, preserving the draft',()=>{
+  const s=setup(()=>{}, {nightEntry:true});
+  s.message.value='고객이 직접 작성한 요구사항';
+  s.continuation.click({preventDefault(){}});
+  assert.equal(s.message.value,'고객이 직접 작성한 요구사항');
+  assert.equal(s.message.focused,true);
+  assert.equal(s.message.scrolled,true);
+  assert.match(s.nodes['#stage-status'].textContent,/그대로/);
+  assert.equal(s.calls,0);
 });
