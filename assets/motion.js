@@ -56,7 +56,7 @@
     stopped = off;
     button.hidden = media.matches;
     document.documentElement.dataset.motion = off ? "off" : "on";
-    button.textContent = off ? "모션 켜기" : "모션 끄기";
+    button.textContent = document.documentElement.lang?.startsWith("en") ? (off ? "Enable motion" : "Pause motion") : (off ? "모션 켜기" : "모션 끄기");
     button.setAttribute("aria-pressed", String(off));
     if (off) stop();
   }
