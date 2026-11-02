@@ -3,3 +3,6 @@
 @media(max-width:360px){.nav .logo{font-size:24px}.nav nav .btn{gap:6px;padding-inline:10px}.nav nav{gap:8px}}
 @media(max-width:700px){body .nav .nav-inner{gap:12px}body .nav nav{gap:12px}}
 @media(max-width:360px){body .nav .logo{font-size:24px}body .nav nav .btn{gap:6px;padding-inline:10px}body .nav nav{gap:8px}}
+
+.footer-language { margin-top: 14px; }
+.footer-language .language-link { display: inline-flex; align-items: center; min-height: 44px; color: inherit; text-underline-offset: 4px; }
