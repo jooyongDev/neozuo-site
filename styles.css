@@ -324,3 +324,22 @@ html[data-motion="off"] :is(.btn,.text-link,.hero-projects a,.next-project) svg 
  .home-page .service-list .service-examples { margin-top:0; padding-top:16px; }
 }
 @media(prefers-reduced-motion:reduce) { .home-page .service-examples a { transition:none; } }
+
+/* Separate the major homepage chapters while keeping related content together. */
+.home-page #services > .wrap,
+.home-page #process > .wrap {
+  border-top:1px solid #3e4652;
+  padding-top:64px;
+}
+.home-page #services { padding-top:72px; }
+.home-page #process { padding-block:32px 96px; }
+.home-page #faq { background:#191d24; padding-block:80px; }
+.home-page #contact { padding-block:96px 96px; }
+@media(max-width:700px) {
+  .home-page #services > .wrap,
+  .home-page #process > .wrap { padding-top:40px; }
+  .home-page #services { padding-top:48px; }
+  .home-page #process { padding-block:16px 64px; }
+  .home-page #faq { padding-block:56px; }
+  .home-page #contact { padding-block:64px 72px; }
+}
