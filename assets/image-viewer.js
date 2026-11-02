@@ -6,7 +6,7 @@
   dialog.className = "image-viewer";
   dialog.setAttribute("aria-labelledby", "image-viewer-title");
   dialog.innerHTML = `
-    <div class="image-viewer-header"><h2 class="image-viewer-title" id="image-viewer-title"></h2><button class="image-viewer-close" type="button" autofocus>닫기</button></div>
+    <div class="image-viewer-header"><h2 class="image-viewer-title" id="image-viewer-title">제품 화면 자세히 보기</h2><button class="image-viewer-close" type="button" autofocus>닫기</button></div>
     <div class="image-viewer-toolbar" role="group" aria-label="이미지 크기 조절">
       <button type="button" data-zoom="out" aria-label="이미지 축소" disabled>축소</button>
       <output aria-live="polite" aria-label="확대 비율">100%</output>
