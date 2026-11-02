@@ -328,7 +328,6 @@ html[data-motion="off"] :is(.btn,.text-link,.hero-projects a,.next-project) svg 
 /* Separate the major homepage chapters while keeping related content together. */
 .home-page #services > .wrap,
 .home-page #process > .wrap {
-  border-top:1px solid #3e4652;
   padding-top:64px;
 }
 .home-page #services { padding-top:72px; }
