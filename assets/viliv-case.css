@@ -1,0 +1,18 @@
+/* Real viliv student web UI, presented with isolated example content. */
+.viliv-exhibit{position:relative;width:100%;min-width:0;flex-shrink:0;align-self:stretch;aspect-ratio:1.45;margin:0;overflow:hidden;border-radius:12px;background:#1c222b;display:flex;align-items:center;justify-content:center}
+.viliv-exhibit__web{position:absolute;left:5%;bottom:10%;width:78%;padding:1%;background:#111419;border:1px solid #818998;border-radius:9px;box-shadow:0 18px 34px #0006}
+.viliv-exhibit__phone{position:absolute;right:4%;top:7%;width:22%;padding:.65%;background:#14181e;border:1px solid #8992a0;border-radius:14px;box-shadow:0 14px 28px #0009}
+.viliv-exhibit__web img,.viliv-exhibit__phone img{display:block;width:100%;height:auto;border-radius:4px}
+.viliv-exhibit a:focus-visible{outline:3px solid #aabaff;outline-offset:4px}
+.viliv-screens{display:grid;gap:60px;margin-top:48px}
+.viliv-screen-feature{display:grid;gap:16px}
+.viliv-screen-feature h3{font-size:clamp(21px,2vw,27px);line-height:1.35}
+.viliv-screen-feature p{color:var(--muted);max-width:68ch;line-height:1.7}
+.viliv-screen-link{display:block;overflow:hidden;border-radius:9px;background:#f8f9fb;box-shadow:0 16px 36px #0005}
+.viliv-screen-link img{display:block;width:100%;height:auto}
+.viliv-phone-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.viliv-phone-pair figure{margin:0;min-width:0}
+.viliv-phone-pair .viliv-screen-link{max-width:390px;margin-inline:auto}
+.viliv-phone-pair figcaption{margin-top:14px;color:var(--muted);font-size:14px;line-height:1.6}
+.viliv-disclosure{color:var(--muted);font-size:14px;line-height:1.7;margin-top:20px}
+@media(max-width:700px){.viliv-exhibit{aspect-ratio:1.28}.viliv-exhibit__web{width:82%;left:3%;bottom:13%}.viliv-exhibit__phone{width:26%;right:3%;top:8%}.viliv-phone-pair{gap:12px}.viliv-screens{gap:40px}}
